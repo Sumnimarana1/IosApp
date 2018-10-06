@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/student/Desktop/ios/UserSignin/build/Debug-iphoneos/Socket.IO-Client-Swift/SocketIO.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/student/Desktop/ios/UserSignin/build/Pods.build/Debug-iphoneos/Socket.IO-Client-Swift.build/unextended-module.modulemap',
+    }]
+  }]
+}
