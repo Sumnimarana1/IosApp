@@ -20,6 +20,7 @@
 		3FF876B02166D82F005844FF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF876AF2166D82F005844FF /* RegisterViewController.swift */; };
 		42325E26545DDA2D69913688 /* Pods_UserSigninUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 560D63C16F8354339E711E9B /* Pods_UserSigninUITests.framework */; };
 		635CE01835E13D968080C2E7 /* Pods_UserSignin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB1F023BD6D0E3210248007 /* Pods_UserSignin.framework */; };
+		BB87B9AB216AE0EA003DBE3C /* FormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB87B9AA216AE0EA003DBE3C /* FormViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		9E4ACFC643D72DE2B5812641 /* Pods-UserSigninUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSigninUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UserSigninUITests/Pods-UserSigninUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9FD42591BDF385B20AD0284D /* Pods-UserSigninTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSigninTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UserSigninTests/Pods-UserSigninTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ACCC027A0C14BD00D8FA0C59 /* Pods-UserSigninTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSigninTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UserSigninTests/Pods-UserSigninTests.release.xcconfig"; sourceTree = "<group>"; };
+		BB87B9A9216AE0EA003DBE3C /* FormViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FormViewController.h; sourceTree = "<group>"; };
+		BB87B9AA216AE0EA003DBE3C /* FormViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FormViewController.m; sourceTree = "<group>"; };
 		F33DC5DE85620CA65F579FCE /* Pods_UserSigninTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserSigninTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -133,6 +136,8 @@
 				3FEC02B12161457700C66198 /* AppDelegate.swift */,
 				3FEC02B32161457700C66198 /* ViewController.swift */,
 				3FEC02B52161457700C66198 /* Main.storyboard */,
+				BB87B9A9216AE0EA003DBE3C /* FormViewController.h */,
+				BB87B9AA216AE0EA003DBE3C /* FormViewController.m */,
 				3FF876AF2166D82F005844FF /* RegisterViewController.swift */,
 				3F437243216183BB00DC0656 /* loginView.swift */,
 				3FEC02B82161457700C66198 /* Assets.xcassets */,
@@ -186,7 +191,6 @@
 				3FEC02AB2161457700C66198 /* Frameworks */,
 				3FEC02AC2161457700C66198 /* Resources */,
 				6481A7D820EE768D85BF60D3 /* [CP] Embed Pods Frameworks */,
-				6810C6D54703832BF127DD43 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -205,8 +209,6 @@
 				3FEC02BE2161457700C66198 /* Sources */,
 				3FEC02BF2161457700C66198 /* Frameworks */,
 				3FEC02C02161457700C66198 /* Resources */,
-				19F992455C893938A564D6CC /* [CP] Embed Pods Frameworks */,
-				393968F7DBC8952B067683BC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -226,8 +228,6 @@
 				3FEC02C92161457700C66198 /* Sources */,
 				3FEC02CA2161457700C66198 /* Frameworks */,
 				3FEC02CB2161457700C66198 /* Resources */,
-				4628916A9EC7FB35D36D7553 /* [CP] Embed Pods Frameworks */,
-				7B3438297548AD3E9211C5D0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -331,51 +331,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		19F992455C893938A564D6CC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UserSigninTests/Pods-UserSigninTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		393968F7DBC8952B067683BC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UserSigninTests/Pods-UserSigninTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4628916A9EC7FB35D36D7553 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UserSigninUITests/Pods-UserSigninUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6481A7D820EE768D85BF60D3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -396,21 +351,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UserSignin/Pods-UserSignin-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6810C6D54703832BF127DD43 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UserSignin/Pods-UserSignin-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6F9892C3AD8AA86D8E0AED0A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -427,21 +367,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7B3438297548AD3E9211C5D0 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UserSigninUITests/Pods-UserSigninUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DBC4F0CB5B623A84325A19A4 /* [CP] Check Pods Manifest.lock */ = {
@@ -469,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB87B9AB216AE0EA003DBE3C /* FormViewController.m in Sources */,
 				3F4372482161853B00DC0656 /* LoginViewController.swift in Sources */,
 				3FF876B02166D82F005844FF /* RegisterViewController.swift in Sources */,
 				3FEC02B42161457700C66198 /* ViewController.swift in Sources */,
