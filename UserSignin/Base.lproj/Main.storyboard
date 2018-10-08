@@ -278,7 +278,7 @@
         <!--Favourite-->
         <scene sceneID="PfL-4d-z4k">
             <objects>
-                <tableViewController id="r2b-yq-IR8" sceneMemberID="viewController">
+                <tableViewController id="r2b-yq-IR8" customClass="FavouriteTableViewController" customModule="UserSignin" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="d6v-5F-FDV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
