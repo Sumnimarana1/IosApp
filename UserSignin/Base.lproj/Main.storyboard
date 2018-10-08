@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wxi-F8-8PY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wxi-F8-8PY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -273,6 +275,35 @@
             </objects>
             <point key="canvasLocation" x="1652" y="63"/>
         </scene>
+        <!--Favourite-->
+        <scene sceneID="PfL-4d-z4k">
+            <objects>
+                <tableViewController id="r2b-yq-IR8" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="d6v-5F-FDV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="fav" id="RrK-Qr-7vf">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RrK-Qr-7vf" id="1PO-4d-9qb">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="r2b-yq-IR8" id="WGA-sx-GbE"/>
+                            <outlet property="delegate" destination="r2b-yq-IR8" id="1m3-ee-bCD"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Favourite" image="icons8-heart-50" id="G4D-hR-CPc"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mkQ-Ze-yKx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="411" y="993"/>
+        </scene>
         <!--Register View Controller-->
         <scene sceneID="RCq-uI-GId">
             <objects>
@@ -439,6 +470,7 @@
                     <connections>
                         <segue destination="W28-o7-Zmn" kind="relationship" relationship="viewControllers" id="na8-Gn-6hj"/>
                         <segue destination="9d1-NY-M83" kind="relationship" relationship="viewControllers" id="UhM-aP-OXa"/>
+                        <segue destination="r2b-yq-IR8" kind="relationship" relationship="viewControllers" id="qeJ-gh-IwU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Erk-bK-eYy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -478,5 +510,6 @@
     <resources>
         <image name="Icon-Small" width="29" height="29"/>
         <image name="Icon-Small-1" width="29" height="29"/>
+        <image name="icons8-heart-50" width="50" height="50"/>
     </resources>
 </document>
