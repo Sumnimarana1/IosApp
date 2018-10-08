@@ -20,6 +20,7 @@
 		3FF876B02166D82F005844FF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF876AF2166D82F005844FF /* RegisterViewController.swift */; };
 		42325E26545DDA2D69913688 /* Pods_UserSigninUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 560D63C16F8354339E711E9B /* Pods_UserSigninUITests.framework */; };
 		635CE01835E13D968080C2E7 /* Pods_UserSignin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB1F023BD6D0E3210248007 /* Pods_UserSignin.framework */; };
+		B83CC6B4216AF18A00739B7F /* OrganizationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83CC6B3216AF18A00739B7F /* OrganizationTableViewController.swift */; };
 		BB87B9AB216AE0EA003DBE3C /* FormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB87B9AA216AE0EA003DBE3C /* FormViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		9E4ACFC643D72DE2B5812641 /* Pods-UserSigninUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSigninUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UserSigninUITests/Pods-UserSigninUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9FD42591BDF385B20AD0284D /* Pods-UserSigninTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSigninTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UserSigninTests/Pods-UserSigninTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ACCC027A0C14BD00D8FA0C59 /* Pods-UserSigninTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSigninTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UserSigninTests/Pods-UserSigninTests.release.xcconfig"; sourceTree = "<group>"; };
+		B83CC6B3216AF18A00739B7F /* OrganizationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationTableViewController.swift; sourceTree = "<group>"; };
 		BB87B9A9216AE0EA003DBE3C /* FormViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FormViewController.h; sourceTree = "<group>"; };
 		BB87B9AA216AE0EA003DBE3C /* FormViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FormViewController.m; sourceTree = "<group>"; };
 		F33DC5DE85620CA65F579FCE /* Pods_UserSigninTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserSigninTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +138,7 @@
 				3FEC02B12161457700C66198 /* AppDelegate.swift */,
 				3FEC02B32161457700C66198 /* ViewController.swift */,
 				3FEC02B52161457700C66198 /* Main.storyboard */,
+				B83CC6B3216AF18A00739B7F /* OrganizationTableViewController.swift */,
 				BB87B9A9216AE0EA003DBE3C /* FormViewController.h */,
 				BB87B9AA216AE0EA003DBE3C /* FormViewController.m */,
 				3FF876AF2166D82F005844FF /* RegisterViewController.swift */,
@@ -398,6 +401,7 @@
 				3F4372482161853B00DC0656 /* LoginViewController.swift in Sources */,
 				3FF876B02166D82F005844FF /* RegisterViewController.swift in Sources */,
 				3FEC02B42161457700C66198 /* ViewController.swift in Sources */,
+				B83CC6B4216AF18A00739B7F /* OrganizationTableViewController.swift in Sources */,
 				3F437244216183BB00DC0656 /* loginView.swift in Sources */,
 				3FEC02B22161457700C66198 /* AppDelegate.swift in Sources */,
 			);
