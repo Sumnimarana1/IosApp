@@ -21,6 +21,7 @@
 		3FF876B02166D82F005844FF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF876AF2166D82F005844FF /* RegisterViewController.swift */; };
 		42325E26545DDA2D69913688 /* Pods_UserSigninUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 560D63C16F8354339E711E9B /* Pods_UserSigninUITests.framework */; };
 		635CE01835E13D968080C2E7 /* Pods_UserSignin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB1F023BD6D0E3210248007 /* Pods_UserSignin.framework */; };
+		8069FC2C21703CF6009C4C70 /* AdminTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8069FC2B21703CF6009C4C70 /* AdminTableViewController.swift */; };
 		B83CC6B4216AF18A00739B7F /* OrganizationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83CC6B3216AF18A00739B7F /* OrganizationTableViewController.swift */; };
 		BB87B9B0216AF625003DBE3C /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB87B9AF216AF625003DBE3C /* FormViewController.swift */; };
 /* End PBXBuildFile section */
@@ -64,6 +65,7 @@
 		560D63C16F8354339E711E9B /* Pods_UserSigninUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserSigninUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		724EEE7B3554CC2C3C87A4A9 /* Pods-UserSigninUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSigninUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UserSigninUITests/Pods-UserSigninUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		779737015548C38AB93415B7 /* Pods-UserSignin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSignin.release.xcconfig"; path = "Pods/Target Support Files/Pods-UserSignin/Pods-UserSignin.release.xcconfig"; sourceTree = "<group>"; };
+		8069FC2B21703CF6009C4C70 /* AdminTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTableViewController.swift; sourceTree = "<group>"; };
 		8BB1F023BD6D0E3210248007 /* Pods_UserSignin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserSignin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E4ACFC643D72DE2B5812641 /* Pods-UserSigninUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSigninUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UserSigninUITests/Pods-UserSigninUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9FD42591BDF385B20AD0284D /* Pods-UserSigninTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSigninTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UserSigninTests/Pods-UserSigninTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				3FEC02BA2161457700C66198 /* LaunchScreen.storyboard */,
 				3FEC02BD2161457700C66198 /* Info.plist */,
 				3F4372472161853B00DC0656 /* LoginViewController.swift */,
+				8069FC2B21703CF6009C4C70 /* AdminTableViewController.swift */,
 			);
 			path = UserSignin;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				3FF876B02166D82F005844FF /* RegisterViewController.swift in Sources */,
 				BB87B9B0216AF625003DBE3C /* FormViewController.swift in Sources */,
 				3FEC02B42161457700C66198 /* ViewController.swift in Sources */,
+				8069FC2C21703CF6009C4C70 /* AdminTableViewController.swift in Sources */,
 				B83CC6B4216AF18A00739B7F /* OrganizationTableViewController.swift in Sources */,
 				37ED644E216B01FC007F1023 /* FavouriteTableViewController.swift in Sources */,
 				3F437244216183BB00DC0656 /* loginView.swift in Sources */,
