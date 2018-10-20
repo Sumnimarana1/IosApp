@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37668FE1217ACDDE009438DB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37668FE0217ACDDE009438DB /* HomeViewController.swift */; };
 		37ED644E216B01FC007F1023 /* FavouriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ED644D216B01FC007F1023 /* FavouriteTableViewController.swift */; };
 		3BC88DBFF578EED98AC316F1 /* Pods_UserSigninTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33DC5DE85620CA65F579FCE /* Pods_UserSigninTests.framework */; };
 		3F437244216183BB00DC0656 /* loginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F437243216183BB00DC0656 /* loginView.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		0C5F82EBAB8DAC502241E12F /* Pods-UserSignin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSignin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UserSignin/Pods-UserSignin.debug.xcconfig"; sourceTree = "<group>"; };
+		37668FE0217ACDDE009438DB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		37ED644D216B01FC007F1023 /* FavouriteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteTableViewController.swift; sourceTree = "<group>"; };
 		3F437243216183BB00DC0656 /* loginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginView.swift; sourceTree = "<group>"; };
 		3F4372472161853B00DC0656 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				3FEC02B32161457700C66198 /* ViewController.swift */,
 				BB87B9AF216AF625003DBE3C /* FormViewController.swift */,
 				3FEC02B52161457700C66198 /* Main.storyboard */,
+				37668FE0217ACDDE009438DB /* HomeViewController.swift */,
 				37ED644D216B01FC007F1023 /* FavouriteTableViewController.swift */,
 				B83CC6B3216AF18A00739B7F /* OrganizationTableViewController.swift */,
 				3FF876AF2166D82F005844FF /* RegisterViewController.swift */,
@@ -406,6 +409,7 @@
 				BB87B9B0216AF625003DBE3C /* FormViewController.swift in Sources */,
 				3FEC02B42161457700C66198 /* ViewController.swift in Sources */,
 				8069FC2C21703CF6009C4C70 /* AdminTableViewController.swift in Sources */,
+				37668FE1217ACDDE009438DB /* HomeViewController.swift in Sources */,
 				B83CC6B4216AF18A00739B7F /* OrganizationTableViewController.swift in Sources */,
 				37ED644E216B01FC007F1023 /* FavouriteTableViewController.swift in Sources */,
 				3F437244216183BB00DC0656 /* loginView.swift in Sources */,
