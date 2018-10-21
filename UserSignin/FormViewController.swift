@@ -10,6 +10,16 @@ import UIKit
 
 class FormViewController: UIViewController {
 
+    
+    @IBOutlet weak var organizationNameTXT: UITextField!
+    
+    @IBOutlet weak var eventName: UITextField!
+    
+    @IBOutlet weak var dateOfEvent: UITextField!
+    
+    @IBOutlet weak var descriptionTXT: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
