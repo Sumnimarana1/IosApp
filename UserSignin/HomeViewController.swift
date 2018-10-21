@@ -21,6 +21,8 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+
+    
     @IBAction func event1(_ sender: Any) {
         if let events=storyboard?.instantiateViewController(withIdentifier: "EventViewController") as? EventViewController{
             events.evntImage=""
