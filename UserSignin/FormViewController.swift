@@ -19,6 +19,9 @@ class FormViewController: UIViewController {
     
     @IBOutlet weak var descriptionTXT: UITextField!
     
+    @IBAction func done(_ segue: UIStoryboardSegue){}
+    
+    @IBAction func cancel(_ segue:UIStoryboardSegue){}
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +34,8 @@ class FormViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    
+   
 
     /*
     // MARK: - Navigation

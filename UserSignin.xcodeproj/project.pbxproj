@@ -26,6 +26,7 @@
 		8069FC2C21703CF6009C4C70 /* AdminTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8069FC2B21703CF6009C4C70 /* AdminTableViewController.swift */; };
 		B83CC6B4216AF18A00739B7F /* OrganizationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83CC6B3216AF18A00739B7F /* OrganizationTableViewController.swift */; };
 		BB87B9B0216AF625003DBE3C /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB87B9AF216AF625003DBE3C /* FormViewController.swift */; };
+		E75B4F03217D32BE000E7428 /* EditEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75B4F02217D32BE000E7428 /* EditEventsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		ACCC027A0C14BD00D8FA0C59 /* Pods-UserSigninTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSigninTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UserSigninTests/Pods-UserSigninTests.release.xcconfig"; sourceTree = "<group>"; };
 		B83CC6B3216AF18A00739B7F /* OrganizationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationTableViewController.swift; sourceTree = "<group>"; };
 		BB87B9AF216AF625003DBE3C /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		E75B4F02217D32BE000E7428 /* EditEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventsViewController.swift; sourceTree = "<group>"; };
 		F33DC5DE85620CA65F579FCE /* Pods_UserSigninTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserSigninTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -146,6 +148,7 @@
 				3FEC02B32161457700C66198 /* ViewController.swift */,
 				BB87B9AF216AF625003DBE3C /* FormViewController.swift */,
 				3FEC02B52161457700C66198 /* Main.storyboard */,
+				E75B4F02217D32BE000E7428 /* EditEventsViewController.swift */,
 				37668FE0217ACDDE009438DB /* HomeViewController.swift */,
 				3F1190C7217D03CD0071FC4D /* EventViewController.swift */,
 				37ED644D216B01FC007F1023 /* FavouriteTableViewController.swift */,
@@ -494,6 +497,7 @@
 				3F1190C8217D03CD0071FC4D /* EventViewController.swift in Sources */,
 				8069FC2C21703CF6009C4C70 /* AdminTableViewController.swift in Sources */,
 				37668FE1217ACDDE009438DB /* HomeViewController.swift in Sources */,
+				E75B4F03217D32BE000E7428 /* EditEventsViewController.swift in Sources */,
 				B83CC6B4216AF18A00739B7F /* OrganizationTableViewController.swift in Sources */,
 				37ED644E216B01FC007F1023 /* FavouriteTableViewController.swift in Sources */,
 				3F437244216183BB00DC0656 /* loginView.swift in Sources */,
