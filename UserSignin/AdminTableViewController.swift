@@ -10,6 +10,8 @@ import UIKit
 
 class AdminTableViewController: UITableViewController {
 
+    
+    var a = ["Dandiya Night", "ISA Dinner", "Potluck"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,25 +26,31 @@ class AdminTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     @IBAction func done(_ segue: UIStoryboardSegue){}
     @IBAction func cancel(_ segue:UIStoryboardSegue){}
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return a.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "event_cell", for: indexPath)
 
         // Configure the cell...
-
+        cell.textLabel?.text = a[indexPath.row]
+        
         return cell
     }
-    */
+ 
+    
+    override func viewWillAppear(_ animated:Bool){
+        tableView.reloadData()
+        
+    }
 
     /*
     // Override to support conditional editing of the table view.
