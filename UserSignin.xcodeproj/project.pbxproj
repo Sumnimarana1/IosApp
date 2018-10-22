@@ -147,6 +147,7 @@
 				3FEC02B12161457700C66198 /* AppDelegate.swift */,
 				3FEC02B32161457700C66198 /* ViewController.swift */,
 				BB87B9AF216AF625003DBE3C /* FormViewController.swift */,
+				8069FC2B21703CF6009C4C70 /* AdminTableViewController.swift */,
 				3FEC02B52161457700C66198 /* Main.storyboard */,
 				E75B4F02217D32BE000E7428 /* EditEventsViewController.swift */,
 				37668FE0217ACDDE009438DB /* HomeViewController.swift */,
@@ -159,7 +160,6 @@
 				3FEC02BA2161457700C66198 /* LaunchScreen.storyboard */,
 				3FEC02BD2161457700C66198 /* Info.plist */,
 				3F4372472161853B00DC0656 /* LoginViewController.swift */,
-				8069FC2B21703CF6009C4C70 /* AdminTableViewController.swift */,
 			);
 			path = UserSignin;
 			sourceTree = "<group>";

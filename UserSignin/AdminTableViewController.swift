@@ -29,10 +29,8 @@ class AdminTableViewController: UITableViewController {
         return 1
     }
 
-    @IBAction func done(_ segue: UIStoryboardSegue){}
-    @IBAction func cancel(_ segue:UIStoryboardSegue){}
-    
-    
+    @IBAction func done(segue:UIStoryboardSegue){}
+    @IBAction func cancel(segue:UIStoryboardSegue){}
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return Events.events.numEvents()
@@ -45,8 +43,6 @@ class AdminTableViewController: UITableViewController {
         // Configure the cell...
         
         let event = Events.events[indexPath.row]
-    
-        
         cell.textLabel?.text = event.nameOfEvent
         cell.detailTextLabel?.text = "Location: \(event.Location) Date: \(event.DateOfEvent)"
         
