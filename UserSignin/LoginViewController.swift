@@ -18,24 +18,30 @@ class LoginViewController: UIViewController {
     let backendless = Backendless.sharedInstance()!
     
     
-    func registerUser() {
-        // do not forget to call Backendless.initApp when your app initializes
-        let user = BackendlessUser()
-        user.setProperty("email", object: String(describing: email))
-        user.password = String(describing: password) as NSString
-        backendless.userService.register(user,
-                                         response: {
-                                            (registeredUser : BackendlessUser?) -> Void in
-                                            print("User registered \(String(describing: registeredUser?.value(forKey: "email")))")
-        },
-                                         error: {
-                                            (fault : Fault?) -> Void in
-                                            print("Server reported an error: \(String(describing: fault?.description))")
-        })
+    func loginUser() {
+    
+    Types.tryblock({ () -> Void in
+    
+        let user = self.backendless.userService.login(self.email.text, password: self.password.text)
+        print("User has been logged in (SYNC): \(String(describing: user))")
+        if user != nil{
+            let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "nextView") as! AdminTableViewController
+            self.present(nextViewController, animated:true, completion:nil)
+        }else{
+            let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "nextView") as! AdminTableViewController
+            self.present(nextViewController, animated:true, completion:nil)
+        }
+    },
+    
+    catchblock: { (exception) -> Void in
+    print("Server reported an error: \(exception as! Fault)")
+    })
     }
     
     @IBAction func login(_ sender: Any) {
-        registerUser()
+         loginUser()
+        
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()

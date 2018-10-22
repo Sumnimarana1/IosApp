@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sv6-MC-EN1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j3H-Ct-31g">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -275,7 +275,7 @@
                                 </state>
                                 <connections>
                                     <action selector="login:" destination="6wC-x2-chu" eventType="touchUpInside" id="DCA-eV-1rf"/>
-                                    <segue destination="mrK-b5-RiF" kind="show" id="MZ4-on-iMD"/>
+                                    <segue destination="mrK-b5-RiF" kind="show" identifier="nextView" id="MZ4-on-iMD"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHO-qc-VW4">
@@ -346,7 +346,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mg9-Td-WTR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Qd6-Cm-eyh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1582" y="134"/>
+            <point key="canvasLocation" x="2520.8000000000002" y="133.5832083958021"/>
         </scene>
         <!--Favourite-->
         <scene sceneID="PfL-4d-z4k">
@@ -509,7 +509,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzW-Tv-I2h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2492" y="134"/>
+            <point key="canvasLocation" x="3431.1999999999998" y="133.5832083958021"/>
         </scene>
         <!--Item-->
         <scene sceneID="yyt-yR-HAO">
@@ -699,7 +699,7 @@
             </objects>
             <point key="canvasLocation" x="3236" y="-1334.4827586206898"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Home-->
         <scene sceneID="MZw-eR-kc8">
             <objects>
                 <viewController id="sv6-MC-EN1" customClass="HomeViewController" customModule="UserSignin" customModuleProvider="target" sceneMemberID="viewController">
@@ -917,13 +917,43 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="RWo-Q2-Unt"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" selectedImage="icons8-home-26" id="FMy-1z-b1d"/>
                     <connections>
                         <segue destination="P9I-FO-tjT" kind="show" identifier="events" id="7cR-h9-G8S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V9U-zO-vbK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="822" y="134"/>
+            <point key="canvasLocation" x="1760.8" y="133.5832083958021"/>
+        </scene>
+        <!--Organization-->
+        <scene sceneID="QLK-E3-rzm">
+            <objects>
+                <tableViewController id="PXm-bA-Qh0" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qFW-cF-9n0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="iCz-Qh-ayQ">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iCz-Qh-ayQ" id="IC6-oS-DMc">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="PXm-bA-Qh0" id="t9Y-cw-KVd"/>
+                            <outlet property="delegate" destination="PXm-bA-Qh0" id="hDk-fY-ZAi"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Organization" selectedImage="icons8-menu-30" id="0It-dU-sup"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e0c-IM-fmk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1250" y="993"/>
         </scene>
         <!--Event View Controller-->
         <scene sceneID="DYo-GH-p8q">
@@ -941,7 +971,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m9g-yl-YJP">
-                                <rect key="frame" x="16" y="69" width="343" height="343"/>
+                                <rect key="frame" x="16" y="107" width="343" height="343"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZt-Lr-nmo">
@@ -959,7 +989,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4UB-RU-q2r">
-                                <rect key="frame" x="0.0" y="13" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="35" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="EVENT" id="xOx-Hy-Dnu">
@@ -1004,6 +1034,24 @@
             </objects>
             <point key="canvasLocation" x="3308" y="-604"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="BYZ-sw-tw6">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="j3H-Ct-31g" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OPu-Oa-OWS">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="sv6-MC-EN1" kind="relationship" relationship="viewControllers" id="eDt-uN-kp5"/>
+                        <segue destination="PXm-bA-Qh0" kind="relationship" relationship="viewControllers" id="6mB-Sf-ecj"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gLa-Qf-7uV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="821.60000000000002" y="133.5832083958021"/>
+        </scene>
     </scenes>
     <resources>
         <image name="1" width="167" height="138"/>
@@ -1014,6 +1062,7 @@
         <image name="Icon-Small" width="29" height="29"/>
         <image name="Icon-Small-1" width="29" height="29"/>
         <image name="icons8-heart-50" width="50" height="50"/>
+        <image name="icons8-home-26" width="26" height="26"/>
         <image name="icons8-menu-30" width="30" height="30"/>
     </resources>
 </document>
