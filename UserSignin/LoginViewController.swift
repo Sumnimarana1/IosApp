@@ -18,28 +18,49 @@ class LoginViewController: UIViewController {
     let backendless = Backendless.sharedInstance()!
     
     
-    func loginUser() {
+    /*func loginUser() {
     
     Types.tryblock({ () -> Void in
     
-        let user = self.backendless.userService.login(self.email.text, password: self.password.text)
+        let user = self.backendless.userService.login("test@gmail.com", password: "123")
         print("User has been logged in (SYNC): \(String(describing: user))")
         if user != nil{
             let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "nextView") as! AdminTableViewController
             self.present(nextViewController, animated:true, completion:nil)
         }else{
-            let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "nextView") as! AdminTableViewController
-            self.present(nextViewController, animated:true, completion:nil)
+         
         }
     },
     
     catchblock: { (exception) -> Void in
     print("Server reported an error: \(exception as! Fault)")
     })
+    }*/
+      @IBAction func logout(segue:UIStoryboardSegue){}
+    func loginUser() {
+      
+        backendless.userService.login(email.text,
+                                      password: password.text,
+                                      response: {
+                                        (loggedUser : BackendlessUser?) -> Void in
+                                        
+                                        print("User has been logged in (SYNC): \(String(describing: loggedUser))")
+                                       
+                                            let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "nextView") as! AdminTableViewController
+                                            self.present(nextViewController, animated:true, completion:nil)
+                                      
+                                        print("User logged in")
+                                        
+        },
+                                      error: {
+                                        (fault : Fault?) -> Void in
+                                        print("Server reported an error: \(String(describing: fault?.description))")
+                                        self.display(title: "Invalid User Login and password")
+        })
     }
     
     @IBAction func login(_ sender: Any) {
-         loginUser()
+        loginUser()
         
         
     }
@@ -64,5 +85,11 @@ class LoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    func display(title:String){
+        
+        let alert = UIAlertController(title: title, message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
 }

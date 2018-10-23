@@ -10,7 +10,7 @@ import UIKit
 
 class AdminTableViewController: UITableViewController {
 
-    
+      let backendless = Backendless.sharedInstance()!
 //    var a = ["Dandiya Night", "ISA Dinner", "Potluck"]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +28,20 @@ class AdminTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
+    func logoutUserAsync() {
+        
+        /*backendless.userService.logout( {(user : AnyObject!) -> () in
+            print("User logged out.")
+            let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "loginView") as! LoginableViewController
+            self.present(nextViewController, animated:true, completion:nil)
+        }, error: { ( fault : Fault!) -> () in
+            print("Server reported an error: \(fault)")
+        })*/
+    }
 
+    
     @IBAction func done(segue:UIStoryboardSegue){}
+      @IBAction func back(segue:UIStoryboardSegue){}
     @IBAction func cancel(segue:UIStoryboardSegue){}
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows

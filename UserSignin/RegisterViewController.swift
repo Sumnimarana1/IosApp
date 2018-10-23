@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import Backendless
 
 class RegisterViewController: UIViewController {
   
@@ -25,17 +26,16 @@ class RegisterViewController: UIViewController {
     }
     @IBAction func registering(_ sender: Any) {
         
-        registerUser()
+        //registerUser()
         registerUserAsync()
     }
     
-    let APP_ID = "A973CD44-FBCE-DEA4-FF7B-407958544E00"
-    let API_KEY = "4C705EBE-331F-E54B-FFAB-C1F9D9EB7D00"
-     var backendless = Backendless.sharedInstance()
-   
+//    let APP_ID = "A973CD44-FBCE-DEA4-FF7B-407958544E00"
+//    let API_KEY = "4C705EBE-331F-E54B-FFAB-C1F9D9EB7D00"
+     var backendless = Backendless.sharedInstance()!
+//
     override func viewDidLoad() {
         super.viewDidLoad()
-        backendless?.initApp(APP_ID, apiKey: API_KEY)
       
     }
     
@@ -60,7 +60,7 @@ class RegisterViewController: UIViewController {
             
 
             
-            let registeredUser = self.backendless?.userService.register(user)
+            let registeredUser = self.backendless.userService.register(user)
             print("User has been registered (ASYNC): \(String(describing: registeredUser?.getProperty("FirstName")))")
             self.display(title: "User has been registered (SYNC): \(String(describing: registeredUser?.getProperty("FirstName")))")
         },
@@ -83,13 +83,13 @@ class RegisterViewController: UIViewController {
             display(title: "password didn't match")
         }
         
-        backendless?.userService.register(user,
+        backendless.userService.register(user,
                                             response: { ( registeredUser : BackendlessUser!) -> () in
                                                
-                                                self.display(title: "User has been registered (SYNC): \(registeredUser.getProperty("FirstName"))")
+                                                self.display(title: "User has been registered (SYNC): \(String(describing: registeredUser.getProperty("FirstName")))")
         },
                                             error: { (fault : Fault!) -> () in
-                                                print("Server reported an error: \(fault)")
+                                                print("Server reported an error: \(String(describing: fault))")
         }
         )
     }
