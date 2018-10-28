@@ -23,6 +23,7 @@ class EventViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.title=evntName
         self.eventImage.image=UIImage(named: evntImage)
         self.label.text=evntName
         self.eventType.text="Event Type: "+self.evntType
