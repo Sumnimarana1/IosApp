@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITextFieldDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         backendless!.initApp(APP_ID, apiKey:API_KEY)
+        IQKeyboardManager.shared.enable = true
         return true
     }
     
