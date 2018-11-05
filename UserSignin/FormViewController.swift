@@ -16,8 +16,7 @@ class FormViewController: UIViewController , UITextViewDelegate, UITextFieldDele
     @IBOutlet weak var eventName: UITextField!
     
     @IBOutlet weak var dateOfEvent: UITextField!
-    
-    @IBOutlet weak var descriptionTXT: UITextField!
+
     
     @IBOutlet weak var LocationTXT: UITextField!
  
@@ -62,9 +61,9 @@ class FormViewController: UIViewController , UITextViewDelegate, UITextFieldDele
         self.view.endEditing(true)
     }
     @IBAction func btnSave(_ sender: Any) {
-        let newEvent = AllEvents(nameOfEvent: eventName.text!,Location: LocationTXT.text!,DateOfEvent: dateOfEvent.text!,Organization: organizationNameTXT.text!,Description: descriptionTXT.text!)
+        let newEvent = AllEvents(nameOfEvent: eventName.text!,Location: LocationTXT.text!,DateOfEvent: dateOfEvent.text!,Organization: organizationNameTXT.text!,Description: eventDetails.text!)
         Events.events.allEvents.append(newEvent)
-        
+        self.dismiss(animated: true, completion: nil)
     }
     
     

@@ -11,8 +11,6 @@
 		371FBB6E21862A7400FAE360 /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FBB6D21862A7400FAE360 /* HomeCollectionViewController.swift */; };
 		371FBB7021862D1800FAE360 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FBB6F21862D1800FAE360 /* CollectionViewController.swift */; };
 		37668FE1217ACDDE009438DB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37668FE0217ACDDE009438DB /* HomeViewController.swift */; };
-		37E258E32186359B008ACF02 /* EventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E258E22186359B008ACF02 /* EventData.swift */; };
-		37ED644E216B01FC007F1023 /* FavouriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ED644D216B01FC007F1023 /* FavouriteTableViewController.swift */; };
 		3BC88DBFF578EED98AC316F1 /* Pods_UserSigninTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33DC5DE85620CA65F579FCE /* Pods_UserSigninTests.framework */; };
 		3F1190C8217D03CD0071FC4D /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1190C7217D03CD0071FC4D /* EventViewController.swift */; };
 		3F26F84E218EA03700B72A7B /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F26F838218EA03700B72A7B /* IQTextView.swift */; };
@@ -35,7 +33,6 @@
 		3F437244216183BB00DC0656 /* loginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F437243216183BB00DC0656 /* loginView.swift */; };
 		3F4372482161853B00DC0656 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4372472161853B00DC0656 /* LoginViewController.swift */; };
 		3FEC02B22161457700C66198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC02B12161457700C66198 /* AppDelegate.swift */; };
-		3FEC02B42161457700C66198 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC02B32161457700C66198 /* ViewController.swift */; };
 		3FEC02B72161457700C66198 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FEC02B52161457700C66198 /* Main.storyboard */; };
 		3FEC02B92161457700C66198 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FEC02B82161457700C66198 /* Assets.xcassets */; };
 		3FEC02BC2161457700C66198 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FEC02BA2161457700C66198 /* LaunchScreen.storyboard */; };
@@ -46,7 +43,6 @@
 		635CE01835E13D968080C2E7 /* Pods_UserSignin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB1F023BD6D0E3210248007 /* Pods_UserSignin.framework */; };
 		8069FC2C21703CF6009C4C70 /* AdminTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8069FC2B21703CF6009C4C70 /* AdminTableViewController.swift */; };
 		80948D74218FEC0A00500BF0 /* WallpaperWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80948D73218FEC0A00500BF0 /* WallpaperWindow.swift */; };
-		B83CC6B4216AF18A00739B7F /* OrganizationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83CC6B3216AF18A00739B7F /* OrganizationTableViewController.swift */; };
 		BB87B9B0216AF625003DBE3C /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB87B9AF216AF625003DBE3C /* FormViewController.swift */; };
 		E75B4F03217D32BE000E7428 /* EditEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75B4F02217D32BE000E7428 /* EditEventsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -74,8 +70,6 @@
 		371FBB6D21862A7400FAE360 /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
 		371FBB6F21862D1800FAE360 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		37668FE0217ACDDE009438DB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		37E258E22186359B008ACF02 /* EventData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventData.swift; sourceTree = "<group>"; };
-		37ED644D216B01FC007F1023 /* FavouriteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteTableViewController.swift; sourceTree = "<group>"; };
 		3F1190C7217D03CD0071FC4D /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		3F26F838218EA03700B72A7B /* IQTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTextView.swift; sourceTree = "<group>"; };
 		3F26F83A218EA03700B72A7B /* IQPreviousNextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQPreviousNextView.swift; sourceTree = "<group>"; };
@@ -99,7 +93,6 @@
 		3F4372472161853B00DC0656 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3FEC02AE2161457700C66198 /* UserSignin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserSignin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FEC02B12161457700C66198 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3FEC02B32161457700C66198 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3FEC02B62161457700C66198 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FEC02B82161457700C66198 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FEC02BB2161457700C66198 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -120,7 +113,6 @@
 		9E4ACFC643D72DE2B5812641 /* Pods-UserSigninUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSigninUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UserSigninUITests/Pods-UserSigninUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9FD42591BDF385B20AD0284D /* Pods-UserSigninTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSigninTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UserSigninTests/Pods-UserSigninTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ACCC027A0C14BD00D8FA0C59 /* Pods-UserSigninTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSigninTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UserSigninTests/Pods-UserSigninTests.release.xcconfig"; sourceTree = "<group>"; };
-		B83CC6B3216AF18A00739B7F /* OrganizationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationTableViewController.swift; sourceTree = "<group>"; };
 		BB87B9AF216AF625003DBE3C /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		E75B4F02217D32BE000E7428 /* EditEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventsViewController.swift; sourceTree = "<group>"; };
 		F33DC5DE85620CA65F579FCE /* Pods_UserSigninTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserSigninTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -255,7 +247,6 @@
 			isa = PBXGroup;
 			children = (
 				3FEC02B12161457700C66198 /* AppDelegate.swift */,
-				3FEC02B32161457700C66198 /* ViewController.swift */,
 				BB87B9AF216AF625003DBE3C /* FormViewController.swift */,
 				8069FC2B21703CF6009C4C70 /* AdminTableViewController.swift */,
 				3F26F836218EA03700B72A7B /* IQKeyboardManagerSwift */,
@@ -263,13 +254,10 @@
 				80948D73218FEC0A00500BF0 /* WallpaperWindow.swift */,
 				371FBB6F21862D1800FAE360 /* CollectionViewController.swift */,
 				371FBB6B21862A5F00FAE360 /* CollectionViewCell.swift */,
-				37E258E22186359B008ACF02 /* EventData.swift */,
 				371FBB6D21862A7400FAE360 /* HomeCollectionViewController.swift */,
 				E75B4F02217D32BE000E7428 /* EditEventsViewController.swift */,
 				37668FE0217ACDDE009438DB /* HomeViewController.swift */,
 				3F1190C7217D03CD0071FC4D /* EventViewController.swift */,
-				37ED644D216B01FC007F1023 /* FavouriteTableViewController.swift */,
-				B83CC6B3216AF18A00739B7F /* OrganizationTableViewController.swift */,
 				3FF876AF2166D82F005844FF /* RegisterViewController.swift */,
 				3F437243216183BB00DC0656 /* loginView.swift */,
 				3FEC02B82161457700C66198 /* Assets.xcassets */,
@@ -537,12 +525,10 @@
 				3F26F85A218EA03700B72A7B /* IQUIScrollView+Additions.swift in Sources */,
 				BB87B9B0216AF625003DBE3C /* FormViewController.swift in Sources */,
 				3F26F850218EA03700B72A7B /* IQTitleBarButtonItem.swift in Sources */,
-				3FEC02B42161457700C66198 /* ViewController.swift in Sources */,
 				3F1190C8217D03CD0071FC4D /* EventViewController.swift in Sources */,
 				8069FC2C21703CF6009C4C70 /* AdminTableViewController.swift in Sources */,
 				3F26F853218EA03700B72A7B /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				3F26F852218EA03700B72A7B /* IQToolbar.swift in Sources */,
-				37E258E32186359B008ACF02 /* EventData.swift in Sources */,
 				3F26F855218EA03700B72A7B /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				37668FE1217ACDDE009438DB /* HomeViewController.swift in Sources */,
 				3F26F859218EA03700B72A7B /* IQKeyboardManager.swift in Sources */,
@@ -551,9 +537,7 @@
 				371FBB6C21862A5F00FAE360 /* CollectionViewCell.swift in Sources */,
 				3F26F85C218EA03700B72A7B /* IQUITextFieldView+Additions.swift in Sources */,
 				371FBB7021862D1800FAE360 /* CollectionViewController.swift in Sources */,
-				B83CC6B4216AF18A00739B7F /* OrganizationTableViewController.swift in Sources */,
 				3F26F851218EA03700B72A7B /* IQBarButtonItem.swift in Sources */,
-				37ED644E216B01FC007F1023 /* FavouriteTableViewController.swift in Sources */,
 				3F26F854218EA03700B72A7B /* IQInvocation.swift in Sources */,
 				3F26F84F218EA03700B72A7B /* IQPreviousNextView.swift in Sources */,
 				3F26F85E218EA03700B72A7B /* IQNSArray+Sort.swift in Sources */,

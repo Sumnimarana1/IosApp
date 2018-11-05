@@ -19,6 +19,11 @@ struct AllEvents {
 
 struct Events {
     
+    
+    let backendless = Backendless.sharedInstance()!
+    var EventDataStore:IDataStore!
+    var OrganisationDataStore:IDataStore!
+    
     static var events:Events = Events()
     
     private init(){}
@@ -61,5 +66,17 @@ struct Events {
     // adds a new airline to the mix
     mutating func addNewEvent(_ event:AllEvents){
         allEvents.append(event)
+    }
+    
+    
+    mutating func saveEvent( nameOfEvent:String,Location:String, DateOfEvent:String, Organization:String, Description:String) {
+        
+        //
+        var EventToSave = AllEvents(nameOfEvent: nameOfEvent, Location: Location, DateOfEvent: DateOfEvent, Organization: Organization, Description: Description)
+        EventToSave = EventDataStore.save(EventToSave) as! AllEvents
+        // so our local version, in cities, has the objectId filled in
+        allEvents.append(EventToSave)
+        
+        //
     }
 }
