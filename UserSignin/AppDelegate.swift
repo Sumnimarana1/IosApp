@@ -13,7 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITextFieldDelegate {
     let APP_ID = "A973CD44-FBCE-DEA4-FF7B-407958544E00"
     let API_KEY = "4C705EBE-331F-E54B-FFAB-C1F9D9EB7D00"
     
-    var window: UIWindow?
+     var window: UIWindow? = WallpaperWindow()
+    //var window: UIWindow?
     var backendless = Backendless.sharedInstance()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {

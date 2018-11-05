@@ -24,6 +24,7 @@ class FormViewController: UIViewController , UITextViewDelegate, UITextFieldDele
     let datePicker = UIDatePicker()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "appimage6.jpg")!)
         createDatePicker()
         //datePicker = UIDatePicker()
         

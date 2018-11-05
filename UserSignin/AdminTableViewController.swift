@@ -14,6 +14,7 @@ class AdminTableViewController: UITableViewController {
 //    var a = ["Dandiya Night", "ISA Dinner", "Potluck"]
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "appimage8.jpg")!)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
