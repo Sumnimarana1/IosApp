@@ -10,7 +10,6 @@
 		371FBB6C21862A5F00FAE360 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FBB6B21862A5F00FAE360 /* CollectionViewCell.swift */; };
 		371FBB6E21862A7400FAE360 /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FBB6D21862A7400FAE360 /* HomeCollectionViewController.swift */; };
 		371FBB7021862D1800FAE360 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FBB6F21862D1800FAE360 /* CollectionViewController.swift */; };
-		37668FE1217ACDDE009438DB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37668FE0217ACDDE009438DB /* HomeViewController.swift */; };
 		3BC88DBFF578EED98AC316F1 /* Pods_UserSigninTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33DC5DE85620CA65F579FCE /* Pods_UserSigninTests.framework */; };
 		3F1190C8217D03CD0071FC4D /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1190C7217D03CD0071FC4D /* EventViewController.swift */; };
 		3F26F84E218EA03700B72A7B /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F26F838218EA03700B72A7B /* IQTextView.swift */; };
@@ -70,7 +69,6 @@
 		371FBB6B21862A5F00FAE360 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		371FBB6D21862A7400FAE360 /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
 		371FBB6F21862D1800FAE360 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
-		37668FE0217ACDDE009438DB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3F1190C7217D03CD0071FC4D /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		3F26F838218EA03700B72A7B /* IQTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTextView.swift; sourceTree = "<group>"; };
 		3F26F83A218EA03700B72A7B /* IQPreviousNextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQPreviousNextView.swift; sourceTree = "<group>"; };
@@ -259,7 +257,6 @@
 				371FBB6B21862A5F00FAE360 /* CollectionViewCell.swift */,
 				371FBB6D21862A7400FAE360 /* HomeCollectionViewController.swift */,
 				E75B4F02217D32BE000E7428 /* EditEventsViewController.swift */,
-				37668FE0217ACDDE009438DB /* HomeViewController.swift */,
 				3F1190C7217D03CD0071FC4D /* EventViewController.swift */,
 				3FF876AF2166D82F005844FF /* RegisterViewController.swift */,
 				3F437243216183BB00DC0656 /* loginView.swift */,
@@ -534,7 +531,6 @@
 				3F26F853218EA03700B72A7B /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				3F26F852218EA03700B72A7B /* IQToolbar.swift in Sources */,
 				3F26F855218EA03700B72A7B /* IQKeyboardManagerConstantsInternal.swift in Sources */,
-				37668FE1217ACDDE009438DB /* HomeViewController.swift in Sources */,
 				3F26F859218EA03700B72A7B /* IQKeyboardManager.swift in Sources */,
 				3F26F85D218EA03700B72A7B /* IQUIView+Hierarchy.swift in Sources */,
 				E75B4F03217D32BE000E7428 /* EditEventsViewController.swift in Sources */,

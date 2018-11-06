@@ -61,6 +61,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.92063631457779171" green="0.9790722150259068" blue="0.89640544655078624" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="rbG-cW-iRz" kind="show" id="hOg-PM-hwx"/>
                                 </connections>
@@ -260,7 +261,7 @@
                                     <action selector="Email:" destination="Qd6-Cm-eyh" eventType="editingDidEnd" id="OaB-CH-95O"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xkd-pe-eBA">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xkd-pe-eBA">
                                 <rect key="frame" x="16" y="191" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="plv-k2-pWJ"/>
@@ -349,7 +350,6 @@
                     <connections>
                         <outlet property="email" destination="dFF-AT-y7a" id="f2t-TA-XaB"/>
                         <outlet property="password" destination="Xkd-pe-eBA" id="Xmt-SA-ju5"/>
-                        <segue destination="pKD-43-dBK" kind="presentation" id="1wA-aA-AcP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mg9-Td-WTR" userLabel="First Responder" sceneMemberID="firstResponder"/>
