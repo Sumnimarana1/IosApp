@@ -61,7 +61,8 @@ class FormViewController: UIViewController , UITextViewDelegate, UITextFieldDele
         self.view.endEditing(true)
     }
     @IBAction func btnSave(_ sender: Any) {
-        let newEvent = AllEvents(nameOfEvent: eventName.text!,Location: LocationTXT.text!,DateOfEvent: dateOfEvent.text!,Organization: organizationNameTXT.text!,Description: eventDetails.text!)
+        
+        let newEvent = EventData(  imageName: "",eventTitle: eventName.text!,eventDescription: eventDetails.text!,eventDate:  datePicker.date ,eventLocation: LocationTXT.text!)
         Events.events.allEvents.append(newEvent)
         self.dismiss(animated: true, completion: nil)
     }

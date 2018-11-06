@@ -23,13 +23,13 @@ struct EventData {
     }
 }
 
-struct AllEvents {
-    var nameOfEvent:String
-    var Location:String
-    var DateOfEvent:String
-    var Organization:String
-    var Description:String
-}
+//struct AllEvents {
+//    var nameOfEvent:String
+//    var Location:String
+//    var DateOfEvent:String
+//    var Organization:String
+//    var Description:String
+//}
 
 struct Events {
     let backendless = Backendless.sharedInstance()!
@@ -42,19 +42,14 @@ struct Events {
     
     var selectedEventIndex:Int = -1
     
-    func selectedEvent() -> AllEvents {
+    func selectedEvent() -> EventData {
         return allEvents[selectedEventIndex]
     }
     //    mutating func addNewCityFlown(city:String){
     //        airlines[selectedAirlineIndex].citiesFlown.append(city)
     //    }
     //    var allEvents:[AllEvents] = []
-     var allEvents:[AllEvents] = [
-        AllEvents(nameOfEvent: "Dandiya Night", Location: "Tower View", DateOfEvent: "12/22/2018",Organization: "ISA", Description : "For Dushhera"),
-        AllEvents(nameOfEvent: "United", Location: " ", DateOfEvent: "Chicago",Organization: " ", Description : " "),
-        AllEvents(nameOfEvent: "United", Location: " ", DateOfEvent: "Chicago",Organization: " ", Description : " "),
-
-        ]
+     var allEvents:[EventData] = [ ]
     
     // the idea is that we will keep airlines private, and access it using these methods
     
@@ -64,25 +59,25 @@ struct Events {
     }
     
     // returns a particular airline
-    func eventNum(_ index:Int) -> AllEvents {
+    func eventNum(_ index:Int) -> EventData {
         return allEvents[index]
     }
     
-    subscript(index:Int)->AllEvents{
+    subscript(index:Int)->EventData{
         return allEvents[index]
     }
     
     // adds a new airline to the mix
-    mutating func addNewEvent(_ event:AllEvents){
+    mutating func addNewEvent(_ event:EventData){
         allEvents.append(event)
     }
     
     
-    mutating func saveEvent( nameOfEvent:String,Location:String, DateOfEvent:String, Organization:String, Description:String) {
+    mutating func saveEvent( nameOfEvent:String,Location:String, DateOfEvent:Date,  Description:String) {
         
         //
-        var EventToSave = AllEvents(nameOfEvent: nameOfEvent, Location: Location, DateOfEvent: DateOfEvent, Organization: Organization, Description: Description)
-        EventToSave = EventDataStore.save(EventToSave) as! AllEvents
+        var EventToSave = EventData(imageName:"",eventTitle:nameOfEvent,eventDescription:Description,eventDate:DateOfEvent, eventLocation:Location)
+        EventToSave = EventDataStore.save(EventToSave) as! EventData
         // so our local version, in cities, has the objectId filled in
         allEvents.append(EventToSave)
         

@@ -56,8 +56,8 @@ class AdminTableViewController: UITableViewController {
         // Configure the cell...
         
         let event = Events.events[indexPath.row]
-        cell.textLabel?.text = event.nameOfEvent
-        cell.detailTextLabel?.text = "Location: \(event.Location) Date: \(event.DateOfEvent)"
+        cell.textLabel?.text = event.eventTitle
+        cell.detailTextLabel?.text = "Location: \(event.eventLocation) Date: \(event.eventDate)"
         
         return cell
     }
