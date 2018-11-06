@@ -9,11 +9,12 @@
 import UIKit
 
 class HomeCollectionViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
-    
+ 
     var events:[EventData]=[]
     
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "appimage5.jpg")!)
         super.viewDidLoad()
         collectionView.delegate=self
         collectionView.dataSource=self
