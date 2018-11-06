@@ -2,11 +2,12 @@
 //  EventData.swift
 //  UserSignin
 //
-//  Created by Supraja Kumbam on 10/28/18.
+//  Created by Kancharla,Sravya on 11/5/18.
 //  Copyright © 2018 Student. All rights reserved.
 //
 
 import Foundation
+
 import UIKit
 
 class Event{
