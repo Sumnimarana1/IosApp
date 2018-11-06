@@ -27,24 +27,8 @@ class HomeCollectionViewController: UIViewController,UICollectionViewDelegate,UI
         // Dispose of any resources that can be recreated.
     }
     
-    func retrieveDate() {
-        let eventStorage = backendLess.data.ofTable("Event_Details")
-        
-        let queryBuilder = DataQueryBuilder()
-        
-        eventStorage?.find(queryBuilder,
-                            response: {
-                                (result) -> () in
-                                let events=result as? [NSDictionary]
-                                for i in events!{
-                                    self.events.append(EventData(imageName: "", eventTitle: i["EventName"] as! String, eventDescription: i["Description"] as! String, eventDate: i["DateOfEvent"] as! Date, eventLocation: i["Location"] as! String))
-                                }
-//                                print("Retrieved \(String(describing: result?.count)) objects")
-        },
-                            error: {
-                                (fault: Fault?) -> () in
-                                print("Server reported an error: \(String(describing: fault?.message))")
-        })
+    func retrieveData() {
+        //data retrieval for the events
     }
     override func viewWillAppear(_ animated: Bool) {
         retrieveDate()
