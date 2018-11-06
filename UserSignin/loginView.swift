@@ -8,20 +8,21 @@
 import UIKit
 import Foundation
 
-struct EventData {
-    var imageName:String
-    var eventTitle:String
-    var eventDescription:String
-    var eventDate:Date
-    var eventLocation:String
-    init(imageName:String,eventTitle:String,eventDescription:String,eventDate:Date, eventLocation:String) {
-        self.imageName=imageName
-        self.eventTitle=eventTitle
-        self.eventDate=eventDate
-        self.eventDescription=eventDescription
-        self.eventLocation=eventLocation
-    }
-}
+//@objcMembers
+//class EventData: NSObject {
+//    var imageName:String
+//    var eventTitle:String
+//    var eventDescription:String
+//    var eventDate:Date
+//    var eventLocation:String
+//    init(imageName:String,eventTitle:String,eventDescription:String,eventDate:Date, eventLocation:String) {
+//        self.imageName=imageName
+//        self.eventTitle=eventTitle
+//        self.eventDate=eventDate
+//        self.eventDescription=eventDescription
+//        self.eventLocation=eventLocation
+//    }
+//}
 
 //struct AllEvents {
 //    var nameOfEvent:String
@@ -30,6 +31,10 @@ struct EventData {
 //    var Organization:String
 //    var Description:String
 //}
+   let datePicker = UIDatePicker()
+
+
+
 
 struct Events {
     let backendless = Backendless.sharedInstance()!
@@ -37,8 +42,11 @@ struct Events {
     var OrganisationDataStore:IDataStore!
     
     static var events:Events = Events()
-    
-    private init(){}
+     var allEvents:[EventData] = [
+        EventData(imageName: "1.png", eventTitle: "Test", eventDescription: "This is Test Event", eventDate: datePicker.date, eventLocation: "VLK Building")]
+    private init(){
+        EventDataStore = backendless.data.of(EventData.self)
+    }
     
     var selectedEventIndex:Int = -1
     
@@ -48,8 +56,8 @@ struct Events {
     //    mutating func addNewCityFlown(city:String){
     //        airlines[selectedAirlineIndex].citiesFlown.append(city)
     //    }
-    //    var allEvents:[AllEvents] = []
-     var allEvents:[EventData] = [ ]
+  //var allEvents:[AllEvents] = []
+    
     
     // the idea is that we will keep airlines private, and access it using these methods
     
@@ -71,16 +79,55 @@ struct Events {
     mutating func addNewEvent(_ event:EventData){
         allEvents.append(event)
     }
+
     
-    
-    mutating func saveEvent( nameOfEvent:String,Location:String, DateOfEvent:Date,  Description:String) {
+    mutating func saveEvent(image:String, EventName:String,Description:String,DateOfEvent:Date,Location:String){
         
         //
-        var EventToSave = EventData(imageName:"",eventTitle:nameOfEvent,eventDescription:Description,eventDate:DateOfEvent, eventLocation:Location)
+        var EventToSave = EventData(imageName:image,eventTitle:EventName,eventDescription:Description,eventDate:DateOfEvent, eventLocation:Location)
         EventToSave = EventDataStore.save(EventToSave) as! EventData
         // so our local version, in cities, has the objectId filled in
         allEvents.append(EventToSave)
         
         //
     }
+//    let backendLess = Backendless()
+//    var events:[EventData]=[]
+//    func retrieveDate() {
+//        let eventStorage = backendLess.data.ofTable("Event_Details")
+//        
+//        let queryBuilder = DataQueryBuilder()
+//        
+//        eventStorage?.find(queryBuilder,
+//                           response: {
+//                            (result) -> () in
+//                            let events=result as? [NSDictionary]
+//                            self.events=[]
+//                            for i in events!{
+//                                self.events.append(EventData(imageName: "", eventTitle: i["EventName"] as! String, eventDescription: i["Description"] as! String, eventDate: i["DateOfEvent"] as! Date, eventLocation: i["Location"] as! String))
+//                            }
+//                            //                                print("Retrieved \(String(describing: result?.count)) objects")
+//        },
+//                           error: {
+//                            (fault: Fault?) -> () in
+//                            print("Server reported an error: \(String(describing: fault?.message))")
+//        })
+//    }
+//    
+//    mutating func saveEventAsynchronously(image:String, EventName:String,Description:String,DateOfEvent:Date,Location:String   ) {
+//        
+//        //
+//        
+//        var EventToSave = EventData(imageName:image,eventTitle:EventName,eventDescription:Description,eventDate:DateOfEvent, eventLocation:Location)
+//        EventDataStore.save(EventToSave, response: {(result) -> Void in
+//            EventToSave = result as! EventData
+//          allEvents.append(EventToSave)
+//           retrieveDate()},
+//                           error:{(exception) -> Void in
+//                            print(exception.debugDescription)
+//                            
+//        })
+//        
+//        //
+//    }
 }

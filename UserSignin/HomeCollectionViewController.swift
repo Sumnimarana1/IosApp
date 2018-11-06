@@ -65,21 +65,21 @@ class HomeCollectionViewController: UIViewController,UICollectionViewDelegate,UI
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! CollectionViewCell
         let eventData=events[indexPath.row]
-        cell.displayContent(imageName: eventData.imageName, eventTitle: eventData.eventTitle, eventDescription: eventData.eventDescription, eventDate: eventData.eventDate,eventLocation:eventData.eventLocation)
+        cell.displayContent(imageName: eventData.imageName ?? "", eventTitle: eventData.eventTitle ?? "", eventDescription: eventData.eventDescription ?? "", eventDate: eventData.eventDate,eventLocation:eventData.eventLocation ?? "")
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //print(indexPath.row)
         if let eventController=storyboard?.instantiateViewController(withIdentifier: "EventViewController") as? EventViewController{
-            eventController.evntImage=self.events[indexPath.row].imageName
-            eventController.evntName=self.events[indexPath.row].eventTitle
-            eventController.evntDescription=self.events[indexPath.row].eventDescription
+            eventController.evntImage=self.events[indexPath.row].imageName ?? "home.png"
+            eventController.evntName=self.events[indexPath.row].eventTitle ?? "No Events"
+            eventController.evntDescription=self.events[indexPath.row].eventDescription ?? "Sorry!"
             let dateFormatter=DateFormatter()
             dateFormatter.dateFormat="MM/dd/yy h:mm"
             let date=dateFormatter.string(from: events[indexPath.row].eventDate)
             eventController.evntDate=date
-            eventController.evntLocation=self.events[indexPath.row].eventLocation
+            eventController.evntLocation=self.events[indexPath.row].eventLocation ?? "Try Again"
             self.present(eventController, animated: true, completion: nil)
         }
     }

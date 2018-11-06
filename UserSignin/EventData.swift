@@ -1,5 +1,5 @@
 //
-//  EventData.swift
+//  Events.swift
 //  UserSignin
 //
 //  Created by Kancharla,Sravya on 11/5/18.
@@ -8,13 +8,26 @@
 
 import Foundation
 
-import UIKit
 
-class Event{
-    var name:String
-    var population:Double
-    init(name:String,population:Double) {
-        self.name=name
-        self.population=population
+@objcMembers
+class EventData: NSObject {
+    var imageName:String?
+    var eventTitle:String?
+    var eventDescription:String?
+    var eventDate:Date
+    var eventLocation:String?
+    init(imageName:String,eventTitle:String,eventDescription:String,eventDate:Date, eventLocation:String) {
+        self.imageName=imageName
+        self.eventTitle=eventTitle
+        self.eventDate=eventDate
+        self.eventDescription=eventDescription
+        self.eventLocation=eventLocation
     }
+    
+    var objectId:String?
+    
+    override var description: String {
+        return "Name: \(eventTitle ?? ""), eventDescription: \(String(describing: eventDescription)), eventDate: \(eventDate), eventLocation: \(eventLocation), ObjectId: \(objectId ?? "N/A")"
+    }
+    
 }

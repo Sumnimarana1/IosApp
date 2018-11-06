@@ -9,9 +9,12 @@
 import UIKit
 
 class FormViewController: UIViewController , UITextViewDelegate, UITextFieldDelegate{
-
+    
+    
+    var events = Events.events
+    @IBOutlet weak var imageView: UITextField!
+    
     @IBOutlet weak var eventDetails:UITextView!
-    @IBOutlet weak var organizationNameTXT: UITextField!
     
     @IBOutlet weak var eventName: UITextField!
     
@@ -60,10 +63,16 @@ class FormViewController: UIViewController , UITextViewDelegate, UITextFieldDele
         dateOfEvent.text = dateformatter.string(from: datePicker.date)
         self.view.endEditing(true)
     }
+    
     @IBAction func btnSave(_ sender: Any) {
         
-        let newEvent = EventData(  imageName: "",eventTitle: eventName.text!,eventDescription: eventDetails.text!,eventDate:  datePicker.date ,eventLocation: LocationTXT.text!)
-        Events.events.allEvents.append(newEvent)
+        let newEvent = EventData(  imageName: imageView.text!, eventTitle: eventName.text!,eventDescription: eventDetails.text!,eventDate:  datePicker.date ,eventLocation: LocationTXT.text!)
+        events.addNewEvent(newEvent)
+        
+        
+        
+//        events.saveEvent(image: imageView.text!, EventName: eventName.text!, Description: eventDetails.text!, DateOfEvent: datePicker.date, Location: LocationTXT.text!)
+        
         self.dismiss(animated: true, completion: nil)
     }
     
