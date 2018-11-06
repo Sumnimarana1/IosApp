@@ -36,6 +36,7 @@ class HomeCollectionViewController: UIViewController,UICollectionViewDelegate,UI
                            response: {
                             (result) -> () in
                             let events=result as? [NSDictionary]
+                            self.events=[]
                             for i in events!{
                                 self.events.append(EventData(imageName: "", eventTitle: i["EventName"] as! String, eventDescription: i["Description"] as! String, eventDate: i["DateOfEvent"] as! Date, eventLocation: i["Location"] as! String))
                             }
