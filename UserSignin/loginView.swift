@@ -32,8 +32,6 @@ struct AllEvents {
 }
 
 struct Events {
-    
-    
     let backendless = Backendless.sharedInstance()!
     var EventDataStore:IDataStore!
     var OrganisationDataStore:IDataStore!
@@ -47,13 +45,10 @@ struct Events {
     func selectedEvent() -> AllEvents {
         return allEvents[selectedEventIndex]
     }
-    
     //    mutating func addNewCityFlown(city:String){
     //        airlines[selectedAirlineIndex].citiesFlown.append(city)
     //    }
-    
     //    var allEvents:[AllEvents] = []
-    
      var allEvents:[AllEvents] = [
         AllEvents(nameOfEvent: "Dandiya Night", Location: "Tower View", DateOfEvent: "12/22/2018",Organization: "ISA", Description : "For Dushhera"),
         AllEvents(nameOfEvent: "United", Location: " ", DateOfEvent: "Chicago",Organization: " ", Description : " "),
