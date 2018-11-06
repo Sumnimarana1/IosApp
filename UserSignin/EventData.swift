@@ -9,15 +9,11 @@
 import Foundation
 import UIKit
 
-struct EventData {
-    var imageName:String
-    var eventTitle:String
-    var eventDescription:String
-    var eventType:String
-    init(imageName:String,eventTitle:String,eventDescription:String,eventType:String) {
-        self.imageName=imageName
-        self.eventTitle=eventTitle
-        self.eventDescription=eventDescription
-        self.eventType=eventType
+class Event{
+    var name:String
+    var population:Double
+    init(name:String,population:Double) {
+        self.name=name
+        self.population=population
     }
 }

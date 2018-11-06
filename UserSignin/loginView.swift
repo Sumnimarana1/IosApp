@@ -5,9 +5,23 @@
 //  Created by Student on 9/30/18.
 //  Copyright © 2018 Student. All rights reserved.
 //
-
+import UIKit
 import Foundation
 
+struct EventData {
+    var imageName:String
+    var eventTitle:String
+    var eventDescription:String
+    var eventDate:Date
+    var eventLocation:String
+    init(imageName:String,eventTitle:String,eventDescription:String,eventDate:Date, eventLocation:String) {
+        self.imageName=imageName
+        self.eventTitle=eventTitle
+        self.eventDate=eventDate
+        self.eventDescription=eventDescription
+        self.eventLocation=eventLocation
+    }
+}
 
 struct AllEvents {
     var nameOfEvent:String
