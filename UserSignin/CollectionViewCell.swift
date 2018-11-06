@@ -15,11 +15,14 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var eventDescription: UILabel!
     @IBOutlet weak var eventTitle: UILabel!
     
-    func displayContent(imageName:String, eventTitle:String, eventDescription:String, eventType:String){
+    func displayContent(imageName:String, eventTitle:String, eventDescription:String, eventDate:Date, eventLocation:String){
         self.eventImage.image=UIImage(named: imageName)
         self.eventTitle.text=eventTitle
-        self.eventDescription.text=eventDescription
-        self.eventType.text=eventType	
+        let dateFormatter=DateFormatter()
+        dateFormatter.dateFormat="MM/dd/yy h:mm"
+        let date=dateFormatter.string(from: eventDate)
+        self.eventDescription.text=eventDescription+"\n"+date
+        self.eventType.text=eventLocation
     }
     
 }

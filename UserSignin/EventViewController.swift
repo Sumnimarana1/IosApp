@@ -11,8 +11,9 @@ class EventViewController: UIViewController {
 
     var evntName=""
     var evntImage=""
-    var evntType=""
+    var evntDate=""
     var evntDescription=""
+    var evntLocation=""
     @IBOutlet weak var eventType: UILabel!
     @IBOutlet weak var eventImage: UIImageView!
     @IBOutlet weak var eventDescription: UILabel!
@@ -27,8 +28,8 @@ class EventViewController: UIViewController {
         self.title=evntName
         self.eventImage.image=UIImage(named: evntImage)
         self.label.text=evntName
-        self.eventType.text="Event Type: "+self.evntType
-        self.eventDescription.text=evntDescription
+        self.eventType.text="Event Location: "+self.evntLocation
+        self.eventDescription.text=evntDescription+"\n"+evntDate
     }
 
     @IBAction func done(_ sender: Any) {
