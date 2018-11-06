@@ -44,6 +44,7 @@
 		8069FC2C21703CF6009C4C70 /* AdminTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8069FC2B21703CF6009C4C70 /* AdminTableViewController.swift */; };
 		80948D74218FEC0A00500BF0 /* WallpaperWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80948D73218FEC0A00500BF0 /* WallpaperWindow.swift */; };
 		BB87B9B0216AF625003DBE3C /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB87B9AF216AF625003DBE3C /* FormViewController.swift */; };
+		BBA3282A2191111900A47B85 /* EventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA328292191111900A47B85 /* EventData.swift */; };
 		E75B4F03217D32BE000E7428 /* EditEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75B4F02217D32BE000E7428 /* EditEventsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +115,7 @@
 		9FD42591BDF385B20AD0284D /* Pods-UserSigninTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSigninTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UserSigninTests/Pods-UserSigninTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ACCC027A0C14BD00D8FA0C59 /* Pods-UserSigninTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSigninTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UserSigninTests/Pods-UserSigninTests.release.xcconfig"; sourceTree = "<group>"; };
 		BB87B9AF216AF625003DBE3C /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		BBA328292191111900A47B85 /* EventData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventData.swift; sourceTree = "<group>"; };
 		E75B4F02217D32BE000E7428 /* EditEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventsViewController.swift; sourceTree = "<group>"; };
 		F33DC5DE85620CA65F579FCE /* Pods_UserSigninTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserSigninTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -251,6 +253,7 @@
 				8069FC2B21703CF6009C4C70 /* AdminTableViewController.swift */,
 				3F26F836218EA03700B72A7B /* IQKeyboardManagerSwift */,
 				3FEC02B52161457700C66198 /* Main.storyboard */,
+				BBA328292191111900A47B85 /* EventData.swift */,
 				80948D73218FEC0A00500BF0 /* WallpaperWindow.swift */,
 				371FBB6F21862D1800FAE360 /* CollectionViewController.swift */,
 				371FBB6B21862A5F00FAE360 /* CollectionViewCell.swift */,
@@ -517,6 +520,7 @@
 			files = (
 				3F26F858218EA03700B72A7B /* IQKeyboardReturnKeyHandler.swift in Sources */,
 				80948D74218FEC0A00500BF0 /* WallpaperWindow.swift in Sources */,
+				BBA3282A2191111900A47B85 /* EventData.swift in Sources */,
 				3F4372482161853B00DC0656 /* LoginViewController.swift in Sources */,
 				3FF876B02166D82F005844FF /* RegisterViewController.swift in Sources */,
 				3F26F84E218EA03700B72A7B /* IQTextView.swift in Sources */,
@@ -711,7 +715,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = DY2JP45FA3;
 				INFOPLIST_FILE = UserSignin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -729,7 +733,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = DY2JP45FA3;
 				INFOPLIST_FILE = UserSignin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
