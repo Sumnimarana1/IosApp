@@ -36,7 +36,7 @@ import Foundation
 
 
 
-struct Events {
+class Events {
     let backendless = Backendless.sharedInstance()!
     var EventDataStore:IDataStore!
     var OrganisationDataStore:IDataStore!
@@ -76,12 +76,12 @@ struct Events {
     }
     
     // adds a new airline to the mix
-    mutating func addNewEvent(_ event:EventData){
+    func addNewEvent(_ event:EventData){
         allEvents.append(event)
     }
 
     
-    mutating func saveEvent(image:String, EventName:String,Description:String,DateOfEvent:Date,Location:String){
+     func saveEvent(image:String, EventName:String,Description:String,DateOfEvent:Date,Location:String){
         
         //
         var EventToSave = EventData(imageName:image,eventTitle:EventName,eventDescription:Description,eventDate:DateOfEvent, eventLocation:Location)
