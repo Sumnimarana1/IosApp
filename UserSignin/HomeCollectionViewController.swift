@@ -9,9 +9,10 @@
 import UIKit
 
 class HomeCollectionViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
-    
-    let backendLess=Backendless()
-    var events:[EventData]=[]
+    var events = Events.events
+    var event = Events.events.allEvents
+    let backendLess = Backendless()
+    //var event:[EventData]=[]
     
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
@@ -27,7 +28,7 @@ class HomeCollectionViewController: UIViewController,UICollectionViewDelegate,UI
         // Dispose of any resources that can be recreated.
     }
     
-    func retrieveDate() {
+    /*func retrieveData() {
         let eventStorage = backendLess.data.ofTable("Event_Details")
         
         let queryBuilder = DataQueryBuilder()
@@ -46,9 +47,10 @@ class HomeCollectionViewController: UIViewController,UICollectionViewDelegate,UI
                             (fault: Fault?) -> () in
                             print("Server reported an error: \(String(describing: fault?.message))")
         })
-    }
+    }*/
     override func viewWillAppear(_ animated: Bool) {
-        retrieveDate()
+       events.retrieveAllEventsAsynchronously()
+        //retrieveDate()
         collectionView.reloadData()
     }
     
@@ -59,12 +61,12 @@ class HomeCollectionViewController: UIViewController,UICollectionViewDelegate,UI
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return events.count
+        return event.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! CollectionViewCell
-        let eventData=events[indexPath.row]
+        let eventData=event[indexPath.row]
         cell.displayContent(imageName: eventData.imageName ?? "", eventTitle: eventData.eventTitle ?? "", eventDescription: eventData.eventDescription ?? "", eventDate: eventData.eventDate,eventLocation:eventData.eventLocation ?? "")
         return cell
     }
@@ -72,14 +74,14 @@ class HomeCollectionViewController: UIViewController,UICollectionViewDelegate,UI
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //print(indexPath.row)
         if let eventController=storyboard?.instantiateViewController(withIdentifier: "EventViewController") as? EventViewController{
-            eventController.evntImage=self.events[indexPath.row].imageName ?? "home.png"
-            eventController.evntName=self.events[indexPath.row].eventTitle ?? "No Events"
-            eventController.evntDescription=self.events[indexPath.row].eventDescription ?? "Sorry!"
+            eventController.evntImage=self.event[indexPath.row].imageName ?? "home.png"
+            eventController.evntName=self.event[indexPath.row].eventTitle ?? "No Events"
+            eventController.evntDescription=self.event[indexPath.row].eventDescription ?? "Sorry!"
             let dateFormatter=DateFormatter()
             dateFormatter.dateFormat="MM/dd/yy h:mm"
-            let date=dateFormatter.string(from: events[indexPath.row].eventDate)
+            let date=dateFormatter.string(from: event[indexPath.row].eventDate)
             eventController.evntDate=date
-            eventController.evntLocation=self.events[indexPath.row].eventLocation ?? "Try Again"
+            eventController.evntLocation=self.event[indexPath.row].eventLocation ?? "Try Again"
             self.present(eventController, animated: true, completion: nil)
         }
     }

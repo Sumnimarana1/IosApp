@@ -37,6 +37,8 @@ class LoginViewController: UIViewController {
     })
     }*/
       @IBAction func logout(segue:UIStoryboardSegue){}
+    
+    
     func loginUser() {
       
         backendless.userService.login(email.text,
@@ -45,7 +47,7 @@ class LoginViewController: UIViewController {
                                         (loggedUser : BackendlessUser?) -> Void in
                                         
                                         print("User has been logged in (SYNC): \(String(describing: loggedUser))")
-                                       
+                                       //var org = loggedUser?.getProperty("Organization") as? Organization
                                             let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "nextView") as! AdminTableViewController
                                             self.present(nextViewController, animated:true, completion:nil)
                                       

@@ -29,7 +29,8 @@
 		3F26F85C218EA03700B72A7B /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F26F84B218EA03700B72A7B /* IQUITextFieldView+Additions.swift */; };
 		3F26F85D218EA03700B72A7B /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F26F84C218EA03700B72A7B /* IQUIView+Hierarchy.swift */; };
 		3F26F85E218EA03700B72A7B /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F26F84D218EA03700B72A7B /* IQNSArray+Sort.swift */; };
-		3F437244216183BB00DC0656 /* loginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F437243216183BB00DC0656 /* loginView.swift */; };
+		3F26F860219F6E5F00B72A7B /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F26F85F219F6E5F00B72A7B /* Organization.swift */; };
+		3F437244216183BB00DC0656 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F437243216183BB00DC0656 /* Model.swift */; };
 		3F4372482161853B00DC0656 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4372472161853B00DC0656 /* LoginViewController.swift */; };
 		3FEC02B22161457700C66198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC02B12161457700C66198 /* AppDelegate.swift */; };
 		3FEC02B72161457700C66198 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FEC02B52161457700C66198 /* Main.storyboard */; };
@@ -88,7 +89,8 @@
 		3F26F84B218EA03700B72A7B /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
 		3F26F84C218EA03700B72A7B /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
 		3F26F84D218EA03700B72A7B /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
-		3F437243216183BB00DC0656 /* loginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginView.swift; sourceTree = "<group>"; };
+		3F26F85F219F6E5F00B72A7B /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
+		3F437243216183BB00DC0656 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		3F4372472161853B00DC0656 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3FEC02AE2161457700C66198 /* UserSignin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserSignin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FEC02B12161457700C66198 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -259,7 +261,8 @@
 				E75B4F02217D32BE000E7428 /* EditEventsViewController.swift */,
 				3F1190C7217D03CD0071FC4D /* EventViewController.swift */,
 				3FF876AF2166D82F005844FF /* RegisterViewController.swift */,
-				3F437243216183BB00DC0656 /* loginView.swift */,
+				3F437243216183BB00DC0656 /* Model.swift */,
+				3F26F85F219F6E5F00B72A7B /* Organization.swift */,
 				3FEC02B82161457700C66198 /* Assets.xcassets */,
 				3FEC02BA2161457700C66198 /* LaunchScreen.storyboard */,
 				3FEC02BD2161457700C66198 /* Info.plist */,
@@ -519,6 +522,7 @@
 				80948D74218FEC0A00500BF0 /* WallpaperWindow.swift in Sources */,
 				3F4372482161853B00DC0656 /* LoginViewController.swift in Sources */,
 				3FF876B02166D82F005844FF /* RegisterViewController.swift in Sources */,
+				3F26F860219F6E5F00B72A7B /* Organization.swift in Sources */,
 				3F26F84E218EA03700B72A7B /* IQTextView.swift in Sources */,
 				3F26F85B218EA03700B72A7B /* IQUIViewController+Additions.swift in Sources */,
 				3F26F856218EA03700B72A7B /* IQKeyboardManagerConstants.swift in Sources */,
@@ -542,7 +546,7 @@
 				3F26F84F218EA03700B72A7B /* IQPreviousNextView.swift in Sources */,
 				3F26F85E218EA03700B72A7B /* IQNSArray+Sort.swift in Sources */,
 				371FBB6E21862A7400FAE360 /* HomeCollectionViewController.swift in Sources */,
-				3F437244216183BB00DC0656 /* loginView.swift in Sources */,
+				3F437244216183BB00DC0656 /* Model.swift in Sources */,
 				3FEC02B22161457700C66198 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,8 +16,8 @@ class EventData: NSObject {
     var eventDescription:String?
     var eventDate:Date
     var eventLocation:String?
-    
-    init(imageName:String,eventTitle:String,eventDescription:String,eventDate:Date, eventLocation:String) {
+      var objectId:String?
+    init(imageName:String?,eventTitle:String?,eventDescription:String?,eventDate:Date, eventLocation:String?) {
         self.imageName=imageName
         self.eventTitle=eventTitle
         self.eventDate=eventDate
@@ -25,18 +25,14 @@ class EventData: NSObject {
         self.eventLocation=eventLocation
     }
     
-    override init() {
-        self.imageName=""
-        self.eventTitle=""
-        self.eventDate=Date()
-        self.eventDescription=""
-        self.eventLocation=""
+    convenience override init() {
+        self.init(imageName:"", eventTitle:"", eventDescription: "", eventDate: Date(),eventLocation:"")
     }
     
-    var objectId:String?
+  
     
     override var description: String {
-        return "Name: \(eventTitle ?? ""), eventDescription: \(String(describing: eventDescription)), eventDate: \(eventDate), eventLocation: \(eventLocation), ObjectId: \(objectId ?? "N/A")"
+        return "Name: \(eventTitle ?? ""), eventDescription: \(String(describing: eventDescription)), eventDate: \(eventDate), eventLocation: \(String(describing: eventLocation)), ObjectId: \(objectId ?? "N/A")"
     }
     
 }

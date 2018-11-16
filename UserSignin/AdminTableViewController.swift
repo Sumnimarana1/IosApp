@@ -11,11 +11,19 @@ import UIKit
 class AdminTableViewController: UITableViewController {
 
       let backendless = Backendless.sharedInstance()!
+    var events:Events!
+     var selectedEvents:EventData!
+   
 //    var a = ["Dandiya Night", "ISA Dinner", "Potluck"]
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "appimage8.jpg")!)
-
+        events = Events.events // our model -- storing it in a local variable so we don't always have to keep writing TouristBureau.touristBureau :-)
+        
+        // We will be notified when a .CitiesReloaded notification is posted
+        // and the citiesReloaded() method will be triggered
+        // this is how we can handle asynchronous retrieval in our model
+        NotificationCenter.default.addObserver(self, selector: #selector(EventDataRetrieved), name: .EventDataRetrieved, object: nil)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -46,7 +54,8 @@ class AdminTableViewController: UITableViewController {
     @IBAction func cancel(segue:UIStoryboardSegue){}
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return Events.events.numEvents()
+        return events.numEvents()
+        
     }
 
     
@@ -55,19 +64,34 @@ class AdminTableViewController: UITableViewController {
 
         // Configure the cell...
         
-        let event = Events.events[indexPath.row]
+        let event = events.allEvents[indexPath.row]
         cell.textLabel?.text = event.eventTitle
-        cell.detailTextLabel?.text = "Location: \(event.eventLocation) Date: \(event.eventDate)"
+        cell.detailTextLabel?.text = "Location: \(String(describing: event.eventLocation)) Date: \(event.eventDate)"
         
         return cell
     }
  
     
     override func viewWillAppear(_ animated:Bool){
+        //tableView.reloadData()
+           //events.retrieveData()
+        let startDate = Date()
+        //touristBureau.reloadTouristSitesForSelectedCity()
+        //self.navigationItem.title = events.selectedEvents?.eventTitle!
+        events.retrieveDataForSelectedOrganization()
         tableView.reloadData()
         
+        print("Done in \(Date().timeIntervalSince(startDate)) seconds ")
+        
     }
-
+    @objc func EventDataRetrieved(){
+        tableView.reloadData()
+    }
+    
+    @objc func retrieveDataForSelectedOrganization() {
+        tableView.reloadData()
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
