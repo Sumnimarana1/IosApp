@@ -7,6 +7,8 @@
 //
 
 import Foundation
+
+@objcMembers
 class Organization:NSObject {
     
 var OrgName:String?

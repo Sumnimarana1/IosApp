@@ -12,7 +12,7 @@ import Foundation
 extension Notification.Name {
     static let OrgRetrieved = Notification.Name("Organization Retrieved")
     static let EventsRetrieved = Notification.Name("events Retrieved")
-    static let EventsforSelectedOrgRetrieved = Notification.Name("Events for Selected Organisation Retrieved")
+    static let eventsForSelectedOrgRetrieved = Notification.Name("Events for Selected Organisation Retrieved")
    static let EventDataRetrieved = Notification.Name("Event Data Retrieved")
 }
    let datePicker = UIDatePicker()
@@ -118,12 +118,12 @@ class Events {
         // EventData referenced in Organization's events  
         print("events")
         
-        queryBuilder.setRelated( ["touristSites"] )
+        queryBuilder.setRelated( ["eventData"] )
         self.EventDataStore.find(queryBuilder,
                     response: {(results) -> Void in
                                     let org = results![0] as! Organization
                                     self.eventsForSelectedOrg = org.eventData
-                                    NotificationCenter.default.post(name: .EventsforSelectedOrgRetrieved,  object: nil) // broadcast the fact that tourist sites for selected city have been retrieved
+                                    NotificationCenter.default.post(name: .eventsForSelectedOrgRetrieved,  object: nil) // broadcast the fact that tourist sites for selected city have been retrieved
         }, error: {(exception) -> Void in
             print(exception.debugDescription)
         })
