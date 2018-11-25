@@ -10,6 +10,7 @@ import UIKit
 import Foundation
 
 extension Notification.Name {
+    static let OrgRetrieved = Notification.Name("Organization Retrieved")
     static let EventsRetrieved = Notification.Name("events Retrieved")
     static let EventsforSelectedOrgRetrieved = Notification.Name("Events for Selected Organisation Retrieved")
    static let EventDataRetrieved = Notification.Name("Event Data Retrieved")
@@ -23,12 +24,15 @@ class Events {
     
     static var events:Events = Events()
       var organization:[Organization] =  []
+
      var allEvents:[EventData] = [
         EventData(imageName: "1.png", eventTitle: "Test", eventDescription: "This is Test Event", eventDate: datePicker.date, eventLocation: "VLK Building")]
     private init(){
+        OrganizationDataStore = backendless.data.of(Organization.self)
         EventDataStore = backendless.data.of(EventData.self)
     }
     
+    var selectedOrg:Organization?
     
     var selectedEventIndex:Int = -1
     var selectedEvents:EventData?
@@ -43,6 +47,9 @@ class Events {
     
     // the idea is that we will keep airlines private, and access it using these methods
     
+    func numOrg() -> Int{
+        return organization.count
+    }
     // returns # of airlines
     func numEvents()->Int {
         return allEvents.count
@@ -53,8 +60,11 @@ class Events {
         return allEvents[index]
     }
     var eventsForSelectedOrg:[EventData] = []
-    subscript(index:Int)->EventData{
-        return allEvents[index]
+    subscript(index:Int)->Organization{
+        return organization[index]
+    }
+    func numeventsForSelectedOrg() -> Int {
+        return eventsForSelectedOrg.count
     }
     
     // adds a new airline to the mix
@@ -63,15 +73,28 @@ class Events {
     }
     func retrieveAllOrganization() {
         let queryBuilder = DataQueryBuilder()
-        queryBuilder!.setRelated(["Event Datas"])      // TouristSites referenced in City's touristSites property will be retrieved for each City
+        queryBuilder!.setRelated(["eventData"])
         queryBuilder!.setPageSize(100)                  // up to 100 TouristSites can be retrieved for each City)
         
         Types.tryblock({() -> Void in
             self.organization = self.OrganizationDataStore.find(queryBuilder) as! [Organization]
             
         },
-                       catchblock: {(fault) -> Void in print(fault ?? "Something has gone wrong  reloadingAllCities()")}
+                       catchblock: {(fault) -> Void in print(fault ?? "Something has gone wrong  reloadingAllOrg()")}
         )
+        
+    }
+    
+    func retrieveAllOrganizationAsynchronously() {
+        let queryBuilder = DataQueryBuilder()
+        queryBuilder!.setRelated(["eventData"])
+        queryBuilder!.setPageSize(100) // up to 100 EventData an be retrieved for each City
+        OrganizationDataStore.find(queryBuilder, response: {(results) -> Void in
+            self.organization = results as! [Organization]
+            NotificationCenter.default.post(name: .OrgRetrieved, object: nil) // broadcast a Notification that Cities have been retrieved
+        }, error: {(exception) -> Void in
+            print(exception.debugDescription)
+        })
         
     }
     

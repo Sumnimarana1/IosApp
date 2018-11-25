@@ -30,6 +30,7 @@
 		3F26F85D218EA03700B72A7B /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F26F84C218EA03700B72A7B /* IQUIView+Hierarchy.swift */; };
 		3F26F85E218EA03700B72A7B /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F26F84D218EA03700B72A7B /* IQNSArray+Sort.swift */; };
 		3F26F860219F6E5F00B72A7B /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F26F85F219F6E5F00B72A7B /* Organization.swift */; };
+		3F26F8AA21AA21A900B72A7B /* OrganizationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F26F8A921AA21A900B72A7B /* OrganizationTableViewController.swift */; };
 		3F437244216183BB00DC0656 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F437243216183BB00DC0656 /* Model.swift */; };
 		3F4372482161853B00DC0656 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4372472161853B00DC0656 /* LoginViewController.swift */; };
 		3FEC02B22161457700C66198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC02B12161457700C66198 /* AppDelegate.swift */; };
@@ -90,6 +91,7 @@
 		3F26F84C218EA03700B72A7B /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
 		3F26F84D218EA03700B72A7B /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
 		3F26F85F219F6E5F00B72A7B /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
+		3F26F8A921AA21A900B72A7B /* OrganizationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationTableViewController.swift; sourceTree = "<group>"; };
 		3F437243216183BB00DC0656 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		3F4372472161853B00DC0656 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3FEC02AE2161457700C66198 /* UserSignin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserSignin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,6 +256,7 @@
 				8069FC2B21703CF6009C4C70 /* AdminTableViewController.swift */,
 				3F26F836218EA03700B72A7B /* IQKeyboardManagerSwift */,
 				3FEC02B52161457700C66198 /* Main.storyboard */,
+				3F26F8A921AA21A900B72A7B /* OrganizationTableViewController.swift */,
 				80948D73218FEC0A00500BF0 /* WallpaperWindow.swift */,
 				371FBB6F21862D1800FAE360 /* CollectionViewController.swift */,
 				371FBB6B21862A5F00FAE360 /* CollectionViewCell.swift */,
@@ -521,6 +524,7 @@
 				3F26F858218EA03700B72A7B /* IQKeyboardReturnKeyHandler.swift in Sources */,
 				80948D74218FEC0A00500BF0 /* WallpaperWindow.swift in Sources */,
 				3F4372482161853B00DC0656 /* LoginViewController.swift in Sources */,
+				3F26F8AA21AA21A900B72A7B /* OrganizationTableViewController.swift in Sources */,
 				3FF876B02166D82F005844FF /* RegisterViewController.swift in Sources */,
 				3F26F860219F6E5F00B72A7B /* Organization.swift in Sources */,
 				3F26F84E218EA03700B72A7B /* IQTextView.swift in Sources */,
