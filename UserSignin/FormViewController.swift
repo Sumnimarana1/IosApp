@@ -33,7 +33,7 @@ class FormViewController: UIViewController , UITextViewDelegate, UITextFieldDele
         /*datePicker?.datePickerMode = .date
         datePicker?.addTarget(self, action: #selector(FormViewController.dateChanged(datePicker:)), for: .valueChanged)
         // Do any additional setup after loading the view.*/
-        eventDetails.text = "Give event description"
+//        eventDetails.text = "Give event description"
         eventDetails.textColor = UIColor.lightGray
         eventDetails.font = UIFont(name: "verdana", size: 13.0)
         eventDetails.returnKeyType = .done

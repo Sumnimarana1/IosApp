@@ -273,8 +273,8 @@
                                     <action selector="password:" destination="Qd6-Cm-eyh" eventType="editingDidEnd" id="75I-n8-Wj1"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdC-Bh-7RO">
-                                <rect key="frame" x="145" y="252" width="85" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdC-Bh-7RO">
+                                <rect key="frame" x="145" y="244" width="85" height="42"/>
                                 <color key="backgroundColor" red="0.21583364971283217" green="0.71409266427681239" blue="0.88293393782383423" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="tpP-7l-LKc"/>
@@ -287,14 +287,14 @@
                                     <action selector="login:" destination="6wC-x2-chu" eventType="touchUpInside" id="DCA-eV-1rf"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHO-qc-VW4">
-                                <rect key="frame" x="16" y="308" width="343" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Don't have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHO-qc-VW4">
+                                <rect key="frame" x="16" y="294" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="suY-ds-WJO">
-                                <rect key="frame" x="145" y="354" width="85" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="suY-ds-WJO">
+                                <rect key="frame" x="145" y="323" width="85" height="36"/>
                                 <color key="backgroundColor" red="0.92861479922279788" green="0.66063536889066687" blue="0.12862826965418703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="ax1-CP-BMm"/>
@@ -307,9 +307,9 @@
                                     <segue destination="tvc-JS-ft4" kind="presentation" id="1J8-af-lWf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLk-IK-Hxq">
-                                <rect key="frame" x="169" y="453" width="37" height="30"/>
-                                <state key="normal" title="Done"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLk-IK-Hxq">
+                                <rect key="frame" x="134" y="383" width="106" height="30"/>
+                                <state key="normal" title="Return to home"/>
                                 <connections>
                                     <action selector="Done:" destination="6wC-x2-chu" eventType="touchUpInside" id="J35-WJ-RqB"/>
                                 </connections>

@@ -55,11 +55,11 @@ class EditEventsViewController: UIViewController {
         let event = Events.events.allEvents[Events.events.selectedEventIndex]
        self.eventNameTXT.text = event.eventTitle
         self.locationTXT.text = event.eventLocation
-       // self.dateOfEvent. =  event.eventDate
+        self.dateOfEvent.text =  "\(event.eventDate)"
         
         
         
-        self.descTXT.text = event.description
+        self.descTXT.text = event.eventDescription
        
     }
     
