@@ -10,7 +10,9 @@ import UIKit
 
 class EditEventsViewController: UIViewController {
 
-    @IBOutlet weak var orgNameTXT: UITextField!
+    var event = Events.events
+    
+   
     @IBOutlet weak var eventNameTXT: UITextField!
     @IBOutlet weak var locationTXT: UITextField!
     @IBOutlet weak var dateOfEvent: UITextField!
@@ -48,7 +50,18 @@ class EditEventsViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        //self.title=eventNameTXT
+        let event = Events.events.allEvents[Events.events.selectedEventIndex]
+       self.eventNameTXT.text = event.eventTitle
+        self.locationTXT.text = event.eventLocation
+       // self.dateOfEvent. =  event.eventDate
+        
+        
+        
+        self.descTXT.text = event.description
+       
+    }
     
     
 
@@ -56,11 +69,10 @@ class EditEventsViewController: UIViewController {
         
 //           if let orgName = orgNameTXT.text! , let eventName = eventNameTXT.text!, let location = locationTXT.text!, let date = dateOfEvent.text!, let desc = descTXT.text!{
         
-        let newEvent = EventData(  imageName: "",eventTitle:  eventNameTXT.text!,eventDescription: descTXT.text!,eventDate:  datePicker.date ,eventLocation: locationTXT.text!)
-        
-      
-        Events.events.allEvents.append(newEvent)
-            
+        //let newEvent = EventData(  imageName: "",eventTitle:  eventNameTXT.text!,eventDescription: descTXT.text!,eventDate:  datePicker.date ,eventLocation: locationTXT.text!)
+        event.saveEvent(image: "", EventName: eventNameTXT.text!  , Description: descTXT.text!, DateOfEvent: datePicker.date, Location: locationTXT.text!)
+       // Events.events.allEvents.append(newEvent)
+        self.dismiss(animated: true, completion: nil)
         
     }
     

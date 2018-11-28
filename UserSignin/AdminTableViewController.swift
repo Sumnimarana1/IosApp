@@ -12,6 +12,7 @@ class AdminTableViewController: UITableViewController {
 
       let backendless = Backendless.sharedInstance()!
     var events:Events!
+    var orgName:String!
      var selectedEvents:EventData!
    
 //    var a = ["Dandiya Night", "ISA Dinner", "Potluck"]
@@ -58,7 +59,9 @@ class AdminTableViewController: UITableViewController {
         
     }
 
-    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        Events.events.selectedEventIndex = indexPath.row
+    }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "event_cell", for: indexPath)
 

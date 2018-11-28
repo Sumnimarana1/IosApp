@@ -2,8 +2,8 @@
 //  OrganizationEventTableViewController.swift
 //  UserSignin
 //
-//  Created by Student on 11/25/18.
-//  Copyright © 2018 Student. All rights reserved.
+//  Created by Sravya Kancharla on 11/25/18.
+//  Copyright © 2018 Sravya Kancharla. All rights reserved.
 //
 
 import UIKit
@@ -30,6 +30,7 @@ class EventsforSelectedOrganizationTableViewController: UITableViewController {
         tableView.reloadData()
     }
     override func viewWillAppear(_ animated: Bool) {
+        
         let startDate = Date()
         //touristBureau.reloadTouristSitesForSelectedCity()
         self.navigationItem.title = events.selectedOrg?.OrgName!

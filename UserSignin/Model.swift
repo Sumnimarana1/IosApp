@@ -23,6 +23,8 @@ class Events {
     var OrganizationDataStore:IDataStore!
     
     static var events:Events = Events()
+    
+    
       var organization:[Organization] =  []
 
      var allEvents:[EventData] = [
@@ -60,7 +62,12 @@ class Events {
         return allEvents[index]
     }
     var eventsForSelectedOrg:[EventData] = []
-    subscript(index:Int)->Organization{
+    
+//    subscript(index:Int) -> Events {
+//        return ev
+//    }
+    
+    subscript(index:Int) -> Organization {
         return organization[index]
     }
     func numeventsForSelectedOrg() -> Int {
@@ -108,6 +115,17 @@ class Events {
         
         //
     }
+    func updateEvent( EventName:String,Description:String,DateOfEvent:Date,Location:String){
+        
+        //
+        var EventToSave = EventData(imageName:"",eventTitle:EventName,eventDescription:Description,eventDate:DateOfEvent, eventLocation:Location)
+        EventToSave = EventDataStore.save(EventToSave) as! EventData
+        // so our local version, in cities, has the objectId filled in
+        allEvents.append(EventToSave)
+        
+        //
+    }
+    
     func retrieveDataForSelectedOrganization() {
         //let eventStorage = backendless.data.ofTable("EventData")
           let startDate = Date()

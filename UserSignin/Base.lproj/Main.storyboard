@@ -417,28 +417,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0fa-tW-4Rv">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0fa-tW-4Rv">
                                 <rect key="frame" x="16" y="317.5" width="97" height="32"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1h2-Sz-9MM">
-                                        <rect key="frame" x="0.0" y="0.0" width="97" height="32"/>
-                                        <color key="backgroundColor" red="0.94450431753316688" green="0.25051974631775004" blue="0.068748883945940364" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="32" id="10a-PY-yIa"/>
-                                            <constraint firstAttribute="width" constant="97" id="cCo-fy-zCr"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <state key="normal" title="Cancel">
-                                            <color key="titleColor" red="0.96052327959999995" green="1" blue="0.99747245449999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="cancel:" destination="tvc-JS-ft4" eventType="touchUpInside" id="WMG-UR-hGj"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ph2-ub-rj1">
-                                <rect key="frame" x="288" y="318" width="71" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1h2-Sz-9MM">
+                                <rect key="frame" x="40" y="385" width="97" height="32"/>
+                                <color key="backgroundColor" red="0.94450431753316688" green="0.25051974631775004" blue="0.068748883945940364" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="10a-PY-yIa"/>
+                                    <constraint firstAttribute="width" constant="97" id="cCo-fy-zCr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.96052327959999995" green="1" blue="0.99747245449999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancel:" destination="tvc-JS-ft4" eventType="touchUpInside" id="WMG-UR-hGj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ph2-ub-rj1">
+                                <rect key="frame" x="258" y="385" width="71" height="32"/>
                                 <color key="backgroundColor" red="0.23052174837378939" green="0.74823915155440412" blue="0.25276566561477404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="Jpn-QL-M4m"/>
@@ -667,13 +665,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e8h-0Y-gpb">
-                                <rect key="frame" x="195" y="143" width="145" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g3y-Cb-Qbr">
                                 <rect key="frame" x="170" y="205" width="170" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -723,13 +714,6 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Organization Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ooh-MN-wlj">
-                                <rect key="frame" x="16" y="143" width="147" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="9oa-tI-g90"/>
@@ -739,7 +723,6 @@
                         <outlet property="descTXT" destination="fsh-ix-jpU" id="ELw-S2-a5l"/>
                         <outlet property="eventNameTXT" destination="g3y-Cb-Qbr" id="qe2-Za-eUD"/>
                         <outlet property="locationTXT" destination="Mun-BE-ucW" id="Wlb-hG-dNj"/>
-                        <outlet property="orgNameTXT" destination="e8h-0Y-gpb" id="et3-du-n1c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PTi-eM-vjh" userLabel="First Responder" sceneMemberID="firstResponder"/>
