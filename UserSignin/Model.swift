@@ -16,6 +16,7 @@ extension Notification.Name {
    static let EventDataRetrieved = Notification.Name("Event Data Retrieved")
 }
    let datePicker = UIDatePicker()
+var eventsData:[EventData]=[]
 
 class Events {
     let backendless = Backendless.sharedInstance()!
@@ -160,6 +161,21 @@ class Events {
         },
                                    error: {(exception) -> Void in
                                     print(exception.debugDescription)
+        })
+        print("Done in \(Date().timeIntervalSince(startDate)) seconds ")
+    }
+    
+    func retrieveAllEventsDataAsynchronously() {
+        let startDate = Date()
+        
+        EventDataStore.find({
+            (retrievedTouristSites) -> Void in
+            eventsData = retrievedTouristSites as! [EventData]
+            NotificationCenter.default.post(name: .EventDataRetrieved, object: nil) // broadcast a Notification that tourist sites have been retrieved
+            
+        },
+                            error: {(exception) -> Void in
+                                print(exception.debugDescription)
         })
         print("Done in \(Date().timeIntervalSince(startDate)) seconds ")
     }
