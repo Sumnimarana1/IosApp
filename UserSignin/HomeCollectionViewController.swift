@@ -21,7 +21,7 @@ class HomeCollectionViewController: UIViewController,UICollectionViewDelegate,UI
         collectionView.delegate=self
         collectionView.dataSource=self
         var timer=Timer()
-        timer=Timer.scheduledTimer(timeInterval: 1, target: self, selector: Selector("reloadView"), userInfo: nil, repeats: false)
+        timer=Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(HomeCollectionViewController.reloadView), userInfo: nil, repeats: false)
         // Do any additional setup after loading the view.
     }
     
@@ -70,14 +70,6 @@ class HomeCollectionViewController: UIViewController,UICollectionViewDelegate,UI
         }
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+
     
 }
