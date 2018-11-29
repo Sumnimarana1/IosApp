@@ -20,36 +20,20 @@ class HomeCollectionViewController: UIViewController,UICollectionViewDelegate,UI
         super.viewDidLoad()
         collectionView.delegate=self
         collectionView.dataSource=self
+        var timer=Timer()
+        timer=Timer.scheduledTimer(timeInterval: 1, target: self, selector: Selector("reloadView"), userInfo: nil, repeats: false)
         // Do any additional setup after loading the view.
     }
     
+    @objc func reloadView(){
+        collectionView.reloadData()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    /*func retrieveData() {
-        let eventStorage = backendLess.data.ofTable("Event_Details")
-        
-        let queryBuilder = DataQueryBuilder()
-        
-        eventStorage?.find(queryBuilder,
-                           response: {
-                            (result) -> () in
-                            let events=result as? [NSDictionary]
-                            self.events=[]
-                            for i in events!{
-                                self.events.append(EventData(imageName: "", eventTitle: i["EventName"] as! String, eventDescription: i["Description"] as! String, eventDate: i["DateOfEvent"] as! Date, eventLocation: i["Location"] as! String))
-                            }
-                            //                                print("Retrieved \(String(describing: result?.count)) objects")
-        },
-                           error: {
-                            (fault: Fault?) -> () in
-                            print("Server reported an error: \(String(describing: fault?.message))")
-        })
-    }*/
-    override func viewWillAppear(_ animated: Bool) {
-       events.retrieveAllEventsAsynchronously()
+        override func viewWillAppear(_ animated: Bool) {
+       events.retrieveAllEventsDataAsynchronously()
         //retrieveDate()
         collectionView.reloadData()
     }
@@ -61,12 +45,12 @@ class HomeCollectionViewController: UIViewController,UICollectionViewDelegate,UI
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return event.count
+        return eventsData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! CollectionViewCell
-        let eventData=event[indexPath.row]
+        let eventData=eventsData[indexPath.row]
         cell.displayContent(imageName: eventData.imageName ?? "", eventTitle: eventData.eventTitle ?? "", eventDescription: eventData.eventDescription ?? "", eventDate: eventData.eventDate,eventLocation:eventData.eventLocation ?? "")
         return cell
     }
