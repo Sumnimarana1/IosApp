@@ -16,7 +16,8 @@ class EventData: NSObject {
     var eventDescription:String?
     var eventDate:Date
     var eventLocation:String?
-      var objectId:String?
+    var objectId:String?
+    
     init(imageName:String?,eventTitle:String?,eventDescription:String?,eventDate:Date, eventLocation:String?) {
         self.imageName=imageName
         self.eventTitle=eventTitle

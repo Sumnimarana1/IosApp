@@ -30,7 +30,8 @@ class Events {
 
      var allEvents:[EventData] = [
         EventData(imageName: "1.png", eventTitle: "Test", eventDescription: "This is Test Event", eventDate: datePicker.date, eventLocation: "VLK Building")]
-    private init(){
+    
+    init(){
         OrganizationDataStore = backendless.data.of(Organization.self)
         EventDataStore = backendless.data.of(EventData.self)
     }
@@ -116,16 +117,38 @@ class Events {
         
         //
     }
-    func updateEvent( EventName:String,Description:String,DateOfEvent:Date,Location:String){
+    /*func updateEventSync( ev:EventData){
         
-        //
-        var EventToSave = EventData(imageName:"",eventTitle:EventName,eventDescription:Description,eventDate:DateOfEvent, eventLocation:Location)
-        EventToSave = EventDataStore.save(EventToSave) as! EventData
-        // so our local version, in cities, has the objectId filled in
-        allEvents.append(EventToSave)
+        //func updateContactSync( contact:Contact)
+            
+            let dataStore = Backendless.sharedInstance().data.of(EventData.ofClass())
+            var error: Fault?
+            ev.eventDescription = "Hii"
+            let updatedEvent = dataStore.save(ev, fault: &error) as? EventData
+            if error == nil {
+                print("Contact has been updated: \(updatedEvent!.objectId)")
+            }
+            else {
+                print("Server reported an error (2): \(error)")
+            }
+    }*/
+    
+    
+    /*func updateEventAsync(ev:EventData) {
+        let dataStore = Backendless.sharedInstance().data.of(EventData.ofClass())
         
-        //
-    }
+        // update object asynchronously
+            ev.eventDescription = "Hii"
+        dataStore!.save(
+            ev,
+            response: { (result: AnyObject!) -> Void in
+                let updatedEvent = result as! EventData
+                print("Contact has been updated: \(updatedEvent.objectId)")
+                } as! (Any?) -> Void,
+            error: { (fault: Fault!) -> Void in
+                print("Server reported an error (2): \(fault)")
+        })
+    }*/
     
     func retrieveDataForSelectedOrganization() {
         //let eventStorage = backendless.data.ofTable("EventData")
@@ -179,5 +202,4 @@ class Events {
         })
         print("Done in \(Date().timeIntervalSince(startDate)) seconds ")
     }
-    
 }

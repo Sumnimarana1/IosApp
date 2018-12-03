@@ -13,8 +13,8 @@ class EditEventsViewController: UIViewController {
     var event = Events.events
     
    
-    @IBOutlet weak var eventNameTXT: UITextField!
-    @IBOutlet weak var locationTXT: UITextField!
+    @IBOutlet weak var eventNameTXT: UILabel!
+    @IBOutlet weak var locationTXT: UILabel!
     @IBOutlet weak var dateOfEvent: UITextField!
     @IBOutlet weak var descTXT: UITextView!
      let datePicker = UIDatePicker()
@@ -67,12 +67,12 @@ class EditEventsViewController: UIViewController {
 
     @IBAction func EditBtn(_ sender: Any) {
         
-//           if let orgName = orgNameTXT.text! , let eventName = eventNameTXT.text!, let location = locationTXT.text!, let date = dateOfEvent.text!, let desc = descTXT.text!{
-        
-        //let newEvent = EventData(  imageName: "",eventTitle:  eventNameTXT.text!,eventDescription: descTXT.text!,eventDate:  datePicker.date ,eventLocation: locationTXT.text!)
-        event.saveEvent(image: "", EventName: eventNameTXT.text!  , Description: descTXT.text!, DateOfEvent: datePicker.date, Location: locationTXT.text!)
-       // Events.events.allEvents.append(newEvent)
-        self.dismiss(animated: true, completion: nil)
+        //if let orgName = orgNameTXT.text! , let eventName = eventNameTXT.text!, let location = locationTXT.text!, let date = dateOfEvent.text!, let desc = descTXT.text!{
+        //event.updateEventSync(ev: EventData)
+        let newEvent = EventData(  imageName: "",eventTitle:  eventNameTXT.text!,eventDescription: descTXT.text!,eventDate:  datePicker.date ,eventLocation: locationTXT.text!)
+        //event.saveEvent(image: "", EventName: eventNameTXT.text!  , Description: descTXT.text!, DateOfEvent: datePicker.date, Location: locationTXT.text!)
+        Events.events.allEvents.append(newEvent)
+        //self.dismiss(animated: true, completion: nil)
         
     }
     
