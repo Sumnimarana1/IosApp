@@ -17,7 +17,7 @@ extension Notification.Name {
 }
    let datePicker = UIDatePicker()
 var eventsData:[EventData]=[]
-
+var images=["a","b","c","d","e","f"]
 class Events {
     let backendless = Backendless.sharedInstance()!
     var EventDataStore:IDataStore!
