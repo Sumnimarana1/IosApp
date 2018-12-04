@@ -20,8 +20,7 @@ class HomeCollectionViewController: UIViewController,UICollectionViewDelegate,UI
         super.viewDidLoad()
         collectionView.delegate=self
         collectionView.dataSource=self
-        var timer=Timer()
-        timer=Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(HomeCollectionViewController.reloadView), userInfo: nil, repeats: false)
+       
         // Do any additional setup after loading the view.
     }
     
@@ -36,9 +35,20 @@ class HomeCollectionViewController: UIViewController,UICollectionViewDelegate,UI
         // Dispose of any resources that can be recreated.
     }
     override func viewWillAppear(_ animated: Bool) {
+        var timer=Timer()
+        timer=Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(HomeCollectionViewController.reloadView), userInfo: nil, repeats: false)
         collectionView.backgroundColor = UIColor.clear.withAlphaComponent(0)
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage (named: "Icon-40"), for: .normal)
+        button.frame = CGRect(x: 0.0, y: 0.0, width: 35.0, height: 35.0)
+        let barButtonItem = UIBarButtonItem(customView: button)
+        self.navigationItem.leftBarButtonItem = barButtonItem
+        
         events.retrieveAllEventsDataAsynchronously()
         //retrieveDate()
+        while(images.count<eventsData.count){
+            images+=images
+        }
         collectionView.reloadData()
     }
     

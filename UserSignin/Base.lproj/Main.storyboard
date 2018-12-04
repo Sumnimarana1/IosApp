@@ -578,13 +578,6 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="DISCOVER" id="Qk0-KX-cmg">
-                        <barButtonItem key="leftBarButtonItem" image="icons8-menu-30" style="plain" id="9lf-St-wl1">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FLP-kk-QnC">
-                                <rect key="frame" x="16" y="7" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="icons8-menu-30"/>
-                            </button>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="RnK-zi-WTo">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hjd-HY-HN3">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
