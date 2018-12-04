@@ -27,13 +27,17 @@ class HomeCollectionViewController: UIViewController,UICollectionViewDelegate,UI
     
     @objc func reloadView(){
         collectionView.reloadData()
+        while(images.count<eventsData.count){
+            images+=images
+        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-        override func viewWillAppear(_ animated: Bool) {
-       events.retrieveAllEventsDataAsynchronously()
+    override func viewWillAppear(_ animated: Bool) {
+        collectionView.backgroundColor = UIColor.clear.withAlphaComponent(0)
+        events.retrieveAllEventsDataAsynchronously()
         //retrieveDate()
         collectionView.reloadData()
     }
@@ -51,21 +55,21 @@ class HomeCollectionViewController: UIViewController,UICollectionViewDelegate,UI
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! CollectionViewCell
         let eventData=eventsData[indexPath.row]
-        cell.displayContent(imageName: eventData.imageName ?? "", eventTitle: eventData.eventTitle ?? "", eventDescription: eventData.eventDescription ?? "", eventDate: eventData.eventDate,eventLocation:eventData.eventLocation ?? "")
+        cell.displayContent(imageName: images[indexPath.row] , eventTitle: eventData.eventTitle ?? "", eventDescription: eventData.eventDescription ?? "", eventDate: eventData.eventDate,eventLocation:eventData.eventLocation ?? "")
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //print(indexPath.row)
         if let eventController=storyboard?.instantiateViewController(withIdentifier: "EventViewController") as? EventViewController{
-            eventController.evntImage=self.event[indexPath.row].imageName ?? "home.png"
-            eventController.evntName=self.event[indexPath.row].eventTitle ?? "No Events"
-            eventController.evntDescription=self.event[indexPath.row].eventDescription ?? "Sorry!"
+            eventController.evntImage=images[indexPath.row]
+            eventController.evntName=eventsData[indexPath.row].eventTitle ?? "No Events"
+            eventController.evntDescription=eventsData[indexPath.row].eventDescription ?? "Sorry!"
             let dateFormatter=DateFormatter()
             dateFormatter.dateFormat="MM/dd/yy h:mm"
-            let date=dateFormatter.string(from: event[indexPath.row].eventDate)
+            let date=dateFormatter.string(from: eventsData[indexPath.row].eventDate)
             eventController.evntDate=date
-            eventController.evntLocation=self.event[indexPath.row].eventLocation ?? "Try Again"
+            eventController.evntLocation=eventsData[indexPath.row].eventLocation ?? "Try Again"
             self.present(eventController, animated: true, completion: nil)
         }
     }

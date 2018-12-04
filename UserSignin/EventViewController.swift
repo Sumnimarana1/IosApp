@@ -27,9 +27,9 @@ class EventViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.title=evntName
         self.eventImage.image=UIImage(named: evntImage)
-        self.label.text=evntName
+        self.label.text="Event Name: \(evntName)"
         self.eventType.text="Event Location: "+self.evntLocation
-        self.eventDescription.text=evntDescription+"\n"+evntDate
+        self.eventDescription.text="Event Description: \(evntDescription)"+"\n"+"Event Date: \(evntDate)"
     }
 
     @IBAction func done(_ sender: Any) {
