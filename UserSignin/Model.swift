@@ -44,13 +44,19 @@ class Events {
     func selectedEvent() -> EventData {
         return allEvents[selectedEventIndex]
     }
+    
+    //returns number of organisations
     func numOrg() -> Int{
         return organization.count
     }
-   
+    
+    
+   //rerurns number of events
     func numEvents()->Int {
         return allEvents.count
     }
+    
+    //returns a selected index
     func eventNum(_ index:Int) -> EventData {
         return allEvents[index]
     }
@@ -60,13 +66,18 @@ class Events {
     subscript(index:Int) -> Organization {
         return organization[index]
     }
+    
+    //returns number of events in a particular selected organisation
     func numeventsForSelectedOrg() -> Int {
         return eventsForSelectedOrg.count
     }
     
+    // adds a new event
     func addNewEvent(_ event:EventData){
         allEvents.append(event)
     }
+    
+    
     func retrieveAllOrganization() {
         let queryBuilder = DataQueryBuilder()
         queryBuilder!.setRelated(["eventData"])
@@ -80,7 +91,7 @@ class Events {
         
     }
     
-    
+    //saves an event
     func saveEvent(image:String, EventName:String,Description:String,DateOfEvent:Date,Location:String,selectedImage:UIImage){
         
       
@@ -94,6 +105,7 @@ class Events {
         
     }
     
+    //retrieves data from a selected organisation
     func retrieveDataForSelectedOrganization(org:String) {
         //let eventStorage = backendless.data.ofTable("EventData")
         let startDate = Date()
@@ -117,7 +129,7 @@ class Events {
        
     }
     
-    
+    //retrieves all events asynchronously
     func retrieveAllEventsAsynchronously() {
         let startDate = Date()
         
@@ -132,6 +144,7 @@ class Events {
         })
         print("Done in \(Date().timeIntervalSince(startDate)) seconds ")
     }
+    
     
     func getImage(eventName:String){
         
@@ -160,7 +173,7 @@ class Events {
         }
     }
     
-    
+    //retrieve all events data asynchronously
     func retrieveAllEventsDataAsynchronously() {
         let startDate = Date()
         
@@ -176,6 +189,8 @@ class Events {
         print("Done in \(Date().timeIntervalSince(startDate)) seconds ")
     }
    
+    
+    //retrieve all organisations asynchronously
     func retrieveAllOrganizationAsynchronously() {
         let queryBuilder = DataQueryBuilder()
         queryBuilder!.setRelated(["eventData"])
@@ -188,6 +203,8 @@ class Events {
         })
         
     }
+    
+    //saves deatils for a event in a selected organisation
     func saveEventsForSelectedOrg(eventData:EventData,selectedImage:UIImage) {
         print("Saving the event Data for the selected org...")
         let startingDate = Date()
