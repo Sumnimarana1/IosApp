@@ -166,6 +166,7 @@ class Events {
         self.OrganizationDataStore.find(queryBuilder,
                                         response: {(results) -> Void in
                                             let selectedOrganization = results![0] as! Organization
+                                            self.selectedOrg = selectedOrganization
                                             self.eventsForSelectedOrg = selectedOrganization.eventData
                                             NotificationCenter.default.post(name: .eventsForSelectedOrgRetrieved,  object: nil) // broadcast the fact that tourist sites for selected city have been retrieved
         }, error: {(exception) -> Void in

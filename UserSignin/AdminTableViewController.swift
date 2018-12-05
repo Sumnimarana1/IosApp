@@ -61,9 +61,10 @@ class AdminTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         Events.events.selectedEventIndex = indexPath.row
-        let user = self.backendless.userService.currentUser
-        let org = user?.getProperty("OrgName") as! String
-        Events.events.selectedOrg =  Organization(OrgName: org, eventData:[Events.events.eventsForSelectedOrg[indexPath.row]])
+//        let user = self.backendless.userService.currentUser
+//        let org = user?.getProperty("OrgName") as! String
+//        Events.events.selectedOrg =  Organization(OrgName: org, eventData:[Events.events.eventsForSelectedOrg[indexPath.row]])
+//    }
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "event_cell", for: indexPath)
