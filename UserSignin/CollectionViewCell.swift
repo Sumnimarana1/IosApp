@@ -18,6 +18,8 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var eventDescription: UILabel!
     @IBOutlet weak var eventTitle: UILabel!
     
+    
+    //displays content after clicking a event 
     func displayContent(imageName:String, eventTitle:String, eventDescription:String, eventDate:Date, eventLocation:String){
         self.eventImage.load(url: URL(string: imageName)!)
         self.eventTitle.text=eventTitle
