@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+/* This is a view controllerfor adding new events to the database*/
 class AddNewEventViewController: UIViewController , UITextViewDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     
     
@@ -75,7 +75,7 @@ class AddNewEventViewController: UIViewController , UITextViewDelegate, UITextFi
         eventDetails.returnKeyType = .done
         eventDetails.delegate = self
     }
-    
+    /* Created  a datePicker*/
     func createDatePicker(){
         datePicker.datePickerMode = .dateAndTime
         dateOfEvent.inputView = datePicker
@@ -96,7 +96,7 @@ class AddNewEventViewController: UIViewController , UITextViewDelegate, UITextFi
         dateOfEvent.text = dateformatter.string(from: datePicker.date)
         self.view.endEditing(true)
     }
-    
+    /*Function for saving events*/
     @IBAction func btnSave(_ sender: Any) {
 
         

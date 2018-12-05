@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
     
       @IBAction func logout(segue:UIStoryboardSegue){}
     
-    
+    /*Logging in with username and password*/
     func loginUser() {
       
         backendless.userService.login(email.text,

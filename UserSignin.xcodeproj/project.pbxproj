@@ -39,7 +39,6 @@
 		3FEC02BC2161457700C66198 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FEC02BA2161457700C66198 /* LaunchScreen.storyboard */; };
 		3FEC02C72161457700C66198 /* UserSigninTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC02C62161457700C66198 /* UserSigninTests.swift */; };
 		3FEC02D22161457700C66198 /* UserSigninUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC02D12161457700C66198 /* UserSigninUITests.swift */; };
-		3FF876B02166D82F005844FF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF876AF2166D82F005844FF /* RegisterViewController.swift */; };
 		42325E26545DDA2D69913688 /* Pods_UserSigninUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 560D63C16F8354339E711E9B /* Pods_UserSigninUITests.framework */; };
 		635CE01835E13D968080C2E7 /* Pods_UserSignin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB1F023BD6D0E3210248007 /* Pods_UserSignin.framework */; };
 		8069FC2C21703CF6009C4C70 /* AdminTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8069FC2B21703CF6009C4C70 /* AdminTableViewController.swift */; };
@@ -106,7 +105,6 @@
 		3FEC02CD2161457700C66198 /* UserSigninUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserSigninUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FEC02D12161457700C66198 /* UserSigninUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSigninUITests.swift; sourceTree = "<group>"; };
 		3FEC02D32161457700C66198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3FF876AF2166D82F005844FF /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		560D63C16F8354339E711E9B /* Pods_UserSigninUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserSigninUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		724EEE7B3554CC2C3C87A4A9 /* Pods-UserSigninUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSigninUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UserSigninUITests/Pods-UserSigninUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		779737015548C38AB93415B7 /* Pods-UserSignin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSignin.release.xcconfig"; path = "Pods/Target Support Files/Pods-UserSignin/Pods-UserSignin.release.xcconfig"; sourceTree = "<group>"; };
@@ -256,7 +254,6 @@
 				3F1190C7217D03CD0071FC4D /* EventViewController.swift */,
 				3F26F8A921AA21A900B72A7B /* OrganizationTableViewController.swift */,
 				BB87B9AF216AF625003DBE3C /* AddNewEventViewController.swift */,
-				3FF876AF2166D82F005844FF /* RegisterViewController.swift */,
 				3F4372472161853B00DC0656 /* LoginViewController.swift */,
 				8069FC2B21703CF6009C4C70 /* AdminTableViewController.swift */,
 				3F26F8AB21AB693600B72A7B /* EventsforSelectedOrganizationTableViewController.swift */,
@@ -526,7 +523,6 @@
 				3F4372482161853B00DC0656 /* LoginViewController.swift in Sources */,
 				3F26F8AC21AB693600B72A7B /* EventsforSelectedOrganizationTableViewController.swift in Sources */,
 				3F26F8AA21AA21A900B72A7B /* OrganizationTableViewController.swift in Sources */,
-				3FF876B02166D82F005844FF /* RegisterViewController.swift in Sources */,
 				3F26F860219F6E5F00B72A7B /* Organization.swift in Sources */,
 				3F26F84E218EA03700B72A7B /* IQTextView.swift in Sources */,
 				3F26F85B218EA03700B72A7B /* IQUIViewController+Additions.swift in Sources */,
@@ -719,7 +715,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DCRA2GSLAV;
+				DEVELOPMENT_TEAM = DY2JP45FA3;
 				INFOPLIST_FILE = UserSignin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -737,7 +733,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DCRA2GSLAV;
+				DEVELOPMENT_TEAM = DY2JP45FA3;
 				INFOPLIST_FILE = UserSignin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
