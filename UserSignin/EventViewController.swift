@@ -26,7 +26,7 @@ class EventViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.title=evntName
-        self.eventImage.load(url: URL(string: evntImage)!);
+        self.eventImage.load(url: URL(string: evntImage)!)
         //self.eventImage.image=UIImage(named: evntImage)
         self.label.text="Event Name: \(evntName)"
         self.eventType.text="Event Location: "+self.evntLocation

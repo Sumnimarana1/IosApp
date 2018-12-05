@@ -64,7 +64,7 @@ class HomeCollectionViewController: UIViewController,UICollectionViewDelegate,UI
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! CollectionViewCell
         let eventData=eventsData[indexPath.row]
-        cell.displayContent(imageName: images[indexPath.row] , eventTitle: eventData.eventTitle ?? "", eventDescription: eventData.eventDescription ?? "", eventDate: eventData.eventDate,eventLocation:eventData.eventLocation ?? "")
+        cell.displayContent(imageName: "https://backendlessappcontent.com/A973CD44-FBCE-DEA4-FF7B-407958544E00/E8343EB1-D71A-6350-FFDE-516417EBC600/files/images/\(eventData.eventTitle!).jpg", eventTitle: eventData.eventTitle ?? "", eventDescription: eventData.eventDescription ?? "", eventDate: eventData.eventDate,eventLocation:eventData.eventLocation ?? "")
         return cell
     }
     

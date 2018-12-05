@@ -9,6 +9,8 @@
 import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
+    var evntImage=""
+    
     @IBOutlet weak var eventImage: UIImageView!
     
     @IBOutlet weak var eventType: UILabel!
@@ -16,7 +18,7 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var eventTitle: UILabel!
     
     func displayContent(imageName:String, eventTitle:String, eventDescription:String, eventDate:Date, eventLocation:String){
-        self.eventImage.image=Events.events.selectedImage
+        self.eventImage.load(url: URL(string: imageName)!)
         self.eventTitle.text=eventTitle
         let dateFormatter=DateFormatter()
         dateFormatter.dateFormat="MM/dd/yy h:mm"
