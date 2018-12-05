@@ -115,7 +115,7 @@ class AddNewEventViewController: UIViewController , UITextViewDelegate, UITextFi
         
         /*event.saveEvent(image: imageView.text!, EventName: eventName.text!, Description: eventDetails.text!, DateOfEvent: datePicker.date, Location: LocationTXT.text!,selectedImage: selectedImage.image!)*/
         
-        event.saveEventsForSelectedOrg(eventData: EventData(imageName: imageView.text!, eventTitle: eventName.text!, eventDescription: eventDetails.text!, eventDate: datePicker.date, eventLocation: LocationTXT.text!))
+        event.saveEventsForSelectedOrg(eventData: EventData(imageName: imageView.text!, eventTitle: eventName.text!, eventDescription: eventDetails.text!, eventDate: datePicker.date, eventLocation: LocationTXT.text!),selectedImage: selectedImage.image!)
         
         self.dismiss(animated: true, completion: nil)
     }

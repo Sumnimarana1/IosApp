@@ -236,12 +236,15 @@ class Events {
         print("Done in \(Date().timeIntervalSince(startDate)) seconds ")
     }
     // saves a (new) tourist site for the selected city
-    func saveEventsForSelectedOrg(eventData:EventData) {
+    func saveEventsForSelectedOrg(eventData:EventData,selectedImage:UIImage) {
         print("Saving the event Data for the selected org...")
         let startingDate = Date()
         Types.tryblock({
             let savedeventData = self.EventDataStore.save(eventData) as! EventData// save one of its org
             self.OrganizationDataStore.addRelation("eventData:EventData:n", parentObjectId: self.selectedOrg!.objectId, childObjects: [savedeventData.objectId!])
+            let imageToSave = UIImageJPEGRepresentation(selectedImage, 1.0)
+            self.backendless.fileService.uploadFile("images/\(String(describing: eventData.eventTitle!)).jpg", content: imageToSave!)
+            
             
         }, catchblock:{ (exception) -> Void in
             print(exception.debugDescription)
