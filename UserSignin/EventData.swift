@@ -33,7 +33,7 @@ class EventData: NSObject {
   
     
     override var description: String {
-        return "Name: \(eventTitle ?? ""), eventDescription: \(String(describing: eventDescription)), eventDate: \(eventDate), eventLocation: \(String(describing: eventLocation)), ObjectId: \(objectId ?? "N/A")"
+        return "EventName: \(eventTitle ?? ""), eventDescription: \(String(describing: eventDescription)), eventDate: \(eventDate), eventLocation: \(String(describing: eventLocation)), ObjectId: \(objectId ?? "N/A")"
     }
     
 }
