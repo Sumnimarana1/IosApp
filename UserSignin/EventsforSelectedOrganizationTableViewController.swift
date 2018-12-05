@@ -16,11 +16,9 @@ class EventsforSelectedOrganizationTableViewController: UITableViewController {
         super.viewDidLoad()
          self.view.backgroundColor = UIColor(patternImage: UIImage(named: "appimage8.jpg")!)
 
-        events = Events.events // our model -- storing it in a local variable so we don't always have to keep writing TouristBureau.touristBureau :-)
+        events = Events.events
         
-        // We will be notified when a .CitiesRetrieved notification is posted
-        // and the citiesRetrieved() method will be triggered
-        // this is how we can handle asynchronous retrieval in our model
+       
         NotificationCenter.default.addObserver(self, selector: #selector(EventsForSelectedOrgRetrieved), name: .eventsForSelectedOrgRetrieved , object: nil)
       
     }
@@ -32,7 +30,6 @@ class EventsforSelectedOrganizationTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         let startDate = Date()
-        //touristBureau.reloadTouristSitesForSelectedCity()
         self.navigationItem.title = events.selectedOrg?.OrgName!
         events.retrieveDataForSelectedOrganization(org:(events.selectedOrg?.OrgName!)!)
         tableView.reloadData()

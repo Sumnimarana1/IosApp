@@ -12,7 +12,6 @@ class HomeCollectionViewController: UIViewController,UICollectionViewDelegate,UI
     var events = Events.events
     var event = Events.events.allEvents
     let backendLess = Backendless()
-    //var event:[EventData]=[]
     
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {

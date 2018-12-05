@@ -15,18 +15,13 @@ class OrganizationTableViewController: UITableViewController {
         super.viewDidLoad()
  self.view.backgroundColor = UIColor(patternImage: UIImage(named: "appimage8.jpg")!)
         
-        events = Events.events // our model -- storing it in a local variable so we don't always have to keep writing TouristBureau.touristBureau :-)
-        
-        // We will be notified when a .CitiesRetrieved notification is posted
-        // and the citiesRetrieved() method will be triggered
-        // this is how we can handle asynchronous retrieval in our model
+        events = Events.events
         NotificationCenter.default.addObserver(self, selector: #selector(orgRetrieved), name: .OrgRetrieved, object: nil)
     
     }
     override func viewWillAppear(_ animated: Bool) {
-           self.navigationItem.title = "Organization"
+        self.navigationItem.title = "Organization"
         events.retrieveAllOrganization()
-        //touristBureau.retrieveAllCitiesAsynchronously() // this is faster ...
         tableView.reloadData()
     }
     

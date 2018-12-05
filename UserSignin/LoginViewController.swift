@@ -18,24 +18,6 @@ class LoginViewController: UIViewController {
     let backendless = Backendless.sharedInstance()!
     
     
-    /*func loginUser() {
-    
-    Types.tryblock({ () -> Void in
-    
-        let user = self.backendless.userService.login("test@gmail.com", password: "123")
-        print("User has been logged in (SYNC): \(String(describing: user))")
-        if user != nil{
-            let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "nextView") as! AdminTableViewController
-            self.present(nextViewController, animated:true, completion:nil)
-        }else{
-         
-        }
-    },
-    
-    catchblock: { (exception) -> Void in
-    print("Server reported an error: \(exception as! Fault)")
-    })
-    }*/
       @IBAction func logout(segue:UIStoryboardSegue){}
     
     
@@ -81,15 +63,7 @@ class LoginViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
     func display(title:String){
         
         let alert = UIAlertController(title: title, message: "", preferredStyle: .alert)
@@ -97,4 +71,13 @@ class LoginViewController: UIViewController {
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
 }

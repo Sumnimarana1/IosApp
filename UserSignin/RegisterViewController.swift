@@ -12,28 +12,23 @@ import UIKit
 class RegisterViewController: UIViewController {
   
     
-  
-    
-    
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
-      @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
-      @IBOutlet weak var retypePassword: UITextField!
+    @IBOutlet weak var retypePassword: UITextField!
     
     @IBAction func cancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func registering(_ sender: Any) {
         
-        //registerUser()
+       
         registerUserAsync()
     }
-    
-//    let APP_ID = "A973CD44-FBCE-DEA4-FF7B-407958544E00"
-//    let API_KEY = "4C705EBE-331F-E54B-FFAB-C1F9D9EB7D00"
+   
      var backendless = Backendless.sharedInstance()!
-//
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "appimage4.jpg")!)
@@ -48,7 +43,7 @@ class RegisterViewController: UIViewController {
             user.setProperty("FirstName", object: String(describing: self.firstName.text!))
             user.setProperty("LastName", object: String(describing: self.lastName.text!))
              user.setProperty("email", object:String(describing: self.email.text!))
-            //user.email = String(describing: self.self.email) as NSString
+           
             if(String(describing: self.password.text!) as NSString == String(describing: self.retypePassword.text!) as NSString){
                 user.password = String(describing: self.password.text!) as NSString
                 print(String(self.password.text!))
