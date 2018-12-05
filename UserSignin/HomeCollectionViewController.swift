@@ -64,6 +64,7 @@ class HomeCollectionViewController: UIViewController,UICollectionViewDelegate,UI
         if let eventController=storyboard?.instantiateViewController(withIdentifier: "EventViewController") as? EventViewController{
             eventController.evntImage=images[indexPath.row]
             eventController.evntName=eventsData[indexPath.row].eventTitle ?? "No Events"
+            Events.events.getImage(eventName: eventsData[indexPath.row].eventTitle!)
             eventController.evntDescription=eventsData[indexPath.row].eventDescription ?? "Sorry!"
             let dateFormatter=DateFormatter()
             dateFormatter.dateFormat="MM/dd/yy h:mm"

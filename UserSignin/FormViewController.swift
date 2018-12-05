@@ -8,10 +8,11 @@
 
 import UIKit
 
-class FormViewController: UIViewController , UITextViewDelegate, UITextFieldDelegate{
+class FormViewController: UIViewController , UITextViewDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     
     
     var event = Events.events
+    
     @IBOutlet weak var imageView: UITextField!
     
     @IBOutlet weak var eventDetails:UITextView!
@@ -24,6 +25,47 @@ class FormViewController: UIViewController , UITextViewDelegate, UITextFieldDele
     @IBOutlet weak var LocationTXT: UITextField!
  
     let datePicker = UIDatePicker()
+    
+    
+    @IBOutlet weak var selectedImage: UIImageView!
+    
+    @IBAction func uploadImage(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        present(picker, animated: true, completion: nil)
+    }
+    
+    //This method stores the selected images
+    func imagePickerController(_ picker:UIImagePickerController, didFinishPickingMediaWithInfo: [String:Any]) {
+        print(didFinishPickingMediaWithInfo)
+        var selectedImage:UIImage?
+        
+        
+        if let editedImage = didFinishPickingMediaWithInfo["UIImagePickerControllerEditedImage"] as? UIImage {
+            print(editedImage.size)
+            selectedImage = editedImage
+        }
+        
+        if let originalImage = didFinishPickingMediaWithInfo["UIImagePickerControllerOriginalImage"] as? UIImage {
+            print(originalImage.size)
+            selectedImage = originalImage
+        }
+        
+        if let finalImage = selectedImage {
+            
+            dismiss(animated: true, completion: nil)
+            self.selectedImage.image = finalImage
+            
+        }
+        
+    }
+    
+    
+    private func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "appimage6.jpg")!)
@@ -71,7 +113,7 @@ class FormViewController: UIViewController , UITextViewDelegate, UITextFieldDele
         
         
         
-        event.saveEvent(image: imageView.text!, EventName: eventName.text!, Description: eventDetails.text!, DateOfEvent: datePicker.date, Location: LocationTXT.text!)
+        event.saveEvent(image: imageView.text!, EventName: eventName.text!, Description: eventDetails.text!, DateOfEvent: datePicker.date, Location: LocationTXT.text!,selectedImage: selectedImage.image!)
         
         
         self.dismiss(animated: true, completion: nil)
