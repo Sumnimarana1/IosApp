@@ -719,9 +719,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DY2JP45FA3;
+				DEVELOPMENT_TEAM = DCRA2GSLAV;
 				INFOPLIST_FILE = UserSignin/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nwmissouri.edu.UserSignin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -737,9 +737,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DY2JP45FA3;
+				DEVELOPMENT_TEAM = DCRA2GSLAV;
 				INFOPLIST_FILE = UserSignin/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nwmissouri.edu.UserSignin;
 				PRODUCT_NAME = "$(TARGET_NAME)";

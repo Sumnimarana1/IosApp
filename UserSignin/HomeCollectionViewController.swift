@@ -74,6 +74,8 @@ class HomeCollectionViewController: UIViewController,UICollectionViewDelegate,UI
             eventController.evntImage=images[indexPath.row]
             eventController.evntName=eventsData[indexPath.row].eventTitle ?? "No Events"
             Events.events.getImage(eventName: eventsData[indexPath.row].eventTitle!)
+            eventController.evntImage = "https://backendlessappcontent.com/A973CD44-FBCE-DEA4-FF7B-407958544E00/E8343EB1-D71A-6350-FFDE-516417EBC600/files/images/\(eventsData[indexPath.row].eventTitle!).jpg"
+            //self.eventImage.load(url: URL(string: s)!);
             eventController.evntDescription=eventsData[indexPath.row].eventDescription ?? "Sorry!"
             let dateFormatter=DateFormatter()
             dateFormatter.dateFormat="MM/dd/yy h:mm"
