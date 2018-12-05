@@ -34,7 +34,7 @@ class EventsforSelectedOrganizationTableViewController: UITableViewController {
         let startDate = Date()
         //touristBureau.reloadTouristSitesForSelectedCity()
         self.navigationItem.title = events.selectedOrg?.OrgName!
-        events.retrieveDataForSelectedOrganization()
+        events.retrieveDataForSelectedOrganization(org:(events.selectedOrg?.OrgName!)!)
         tableView.reloadData()
         
         print("Done in \(Date().timeIntervalSince(startDate)) seconds ")

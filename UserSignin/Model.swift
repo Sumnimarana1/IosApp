@@ -152,28 +152,29 @@ class Events {
      })
      }*/
     
-    func retrieveDataForSelectedOrganization() {
+    func retrieveDataForSelectedOrganization(org:String) {
         //let eventStorage = backendless.data.ofTable("EventData")
         let startDate = Date()
-        
+        eventsForSelectedOrg = []
         print("events")
         let queryBuilder:DataQueryBuilder  = DataQueryBuilder()
-        queryBuilder.setWhereClause("name = '\(self.selectedEvents?.eventTitle ?? "")'" ) // restrict ourselves to one city
+        queryBuilder.setWhereClause("OrgName = '\(org)'" ) // restrict ourselves to one city
         // EventData referenced in Organization's events  
         print("events")
         
         queryBuilder.setRelated( ["eventData"] )
-        self.EventDataStore.find(queryBuilder,
-                                 response: {(results) -> Void in
-                                    let org = results![0] as! Organization
-                                    self.eventsForSelectedOrg = org.eventData
-                                    NotificationCenter.default.post(name: .eventsForSelectedOrgRetrieved,  object: nil) // broadcast the fact that tourist sites for selected city have been retrieved
+        self.OrganizationDataStore.find(queryBuilder,
+                                        response: {(results) -> Void in
+                                            let selectedOrganization = results![0] as! Organization
+                                            self.eventsForSelectedOrg = selectedOrganization.eventData
+                                            NotificationCenter.default.post(name: .eventsForSelectedOrgRetrieved,  object: nil) // broadcast the fact that tourist sites for selected city have been retrieved
         }, error: {(exception) -> Void in
             print(exception.debugDescription)
         })
         print("Done in \(Date().timeIntervalSince(startDate)) seconds ")
         //        print("events")
     }
+    
     
     func retrieveAllEventsAsynchronously() {
         let startDate = Date()

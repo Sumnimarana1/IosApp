@@ -63,7 +63,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.92063631457779171" green="0.9790722150259068" blue="0.89640544655078624" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
-                                    <segue destination="rbG-cW-iRz" kind="show" id="hOg-PM-hwx"/>
+                                    <segue destination="rbG-cW-iRz" kind="presentation" id="ago-6N-9Rm"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

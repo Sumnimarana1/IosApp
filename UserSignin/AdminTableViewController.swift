@@ -11,7 +11,6 @@ import UIKit
 class AdminTableViewController: UITableViewController {
 
       let backendless = Backendless.sharedInstance()!
-    var events:Events = Events()
     //var events:Events!
     var orgName:String!
      var selectedEvents:EventData!
@@ -20,12 +19,13 @@ class AdminTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "appimage8.jpg")!)
-        events = Events.events // our model -- storing it in a local variable so we don't always have to keep writing TouristBureau.touristBureau :-)
+//        events = Events.events // our model -- storing it in a local variable so we don't always have to keep writing TouristBureau.touristBureau :-)
         
         // We will be notified when a .CitiesReloaded notification is posted
         // and the citiesReloaded() method will be triggered
         // this is how we can handle asynchronous retrieval in our model
-        NotificationCenter.default.addObserver(self, selector: #selector(EventDataRetrieved), name: .EventDataRetrieved, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(EventDataRetrieved), name: .EventDataRetrieved, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(retrieveDataForSelectedOrganization), name: .eventsForSelectedOrgRetrieved, object: nil)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -56,7 +56,7 @@ class AdminTableViewController: UITableViewController {
     @IBAction func cancel(segue:UIStoryboardSegue){}
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return events.numEvents()
+        return Events.events.eventsForSelectedOrg.count
         
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -67,27 +67,28 @@ class AdminTableViewController: UITableViewController {
 
         // Configure the cell...
         
-        let event = events.allEvents[indexPath.row]
+        let event = Events.events.eventsForSelectedOrg[indexPath.row]
         
         cell.textLabel?.text = event.eventTitle
             //event.eventTitle
-        cell.detailTextLabel?.text = "Location: \(String(describing: event.eventLocation)) Date: \(event.eventDate)"
+        cell.detailTextLabel?.text = "Location: \(event.eventLocation!) Date: \(event.eventDate)"
         
         return cell
     }
  
     
     override func viewWillAppear(_ animated:Bool){
-        //tableView.reloadData()
-           //events.retrieveData()
         let startDate = Date()
         //touristBureau.reloadTouristSitesForSelectedCity()
         //self.navigationItem.title = events.selectedEvents?.eventTitle!
-        events.retrieveAllEventsAsynchronously()
+        let user = self.backendless.userService.currentUser
+        let org = user?.getProperty("OrgName") as! String
+        //et category = Decoder.decodeObject(forKey: org.category) as! String
+        Events.events.retrieveDataForSelectedOrganization(org:org)
+        //events.retrieveAllEventsAsynchronously()
         tableView.reloadData()
         
         print("Done in \(Date().timeIntervalSince(startDate)) seconds ")
-        
     }
     @objc func EventDataRetrieved(){
         tableView.reloadData()

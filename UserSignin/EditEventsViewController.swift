@@ -52,9 +52,9 @@ class EditEventsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         //self.title=eventNameTXT
-        let event = Events.events.allEvents[Events.events.selectedEventIndex]
+        let event = Events.events.eventsForSelectedOrg[Events.events.selectedEventIndex]
        self.eventNameTXT.text = event.eventTitle
-        self.locationTXT.text = event.eventLocation
+        self.locationTXT.text = event.eventLocation!
         self.dateOfEvent.text =  "\(event.eventDate)"
         
         
