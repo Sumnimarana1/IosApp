@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FormViewController: UIViewController , UITextViewDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+class AddNewEventViewController: UIViewController , UITextViewDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     
     
     var event = Events.events
@@ -113,8 +113,9 @@ class FormViewController: UIViewController , UITextViewDelegate, UITextFieldDele
         
         
         
-        event.saveEvent(image: imageView.text!, EventName: eventName.text!, Description: eventDetails.text!, DateOfEvent: datePicker.date, Location: LocationTXT.text!,selectedImage: selectedImage.image!)
+        /*event.saveEvent(image: imageView.text!, EventName: eventName.text!, Description: eventDetails.text!, DateOfEvent: datePicker.date, Location: LocationTXT.text!,selectedImage: selectedImage.image!)*/
         
+        event.saveEventsForSelectedOrg(eventData: EventData(imageName: imageView.text!, eventTitle: eventName.text!, eventDescription: eventDetails.text!, eventDate: datePicker.date, eventLocation: LocationTXT.text!))
         
         self.dismiss(animated: true, completion: nil)
     }

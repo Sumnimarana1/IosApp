@@ -61,6 +61,9 @@ class AdminTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         Events.events.selectedEventIndex = indexPath.row
+        let user = self.backendless.userService.currentUser
+        let org = user?.getProperty("OrgName") as! String
+        Events.events.selectedOrg =  Organization(OrgName: org, eventData:[Events.events.eventsForSelectedOrg[indexPath.row]])
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "event_cell", for: indexPath)
@@ -90,11 +93,16 @@ class AdminTableViewController: UITableViewController {
         
         print("Done in \(Date().timeIntervalSince(startDate)) seconds ")
     }
-    @objc func EventDataRetrieved(){
-        tableView.reloadData()
-    }
+//    @objc func EventDataRetrieved(){
+//        tableView.reloadData()
+//    }
     
     @objc func retrieveDataForSelectedOrganization() {
         tableView.reloadData()
     }
+    
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//
+//    }
+
 }

@@ -8,16 +8,19 @@
 
 import UIKit
 
-class EditEventsViewController: UIViewController {
+class EventsDetailViewController: UIViewController {
 
     var event = Events.events
     
-   
+
     @IBOutlet weak var eventNameTXT: UILabel!
+  
     @IBOutlet weak var locationTXT: UILabel!
-    @IBOutlet weak var dateOfEvent: UITextField!
-    @IBOutlet weak var descTXT: UITextView!
-     let datePicker = UIDatePicker()
+    
+    @IBOutlet weak var descTXT: UILabel!
+    
+    @IBOutlet weak var dateOfEvent: UILabel!
+    let datePicker = UIDatePicker()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "appimage6.jpg")!)
@@ -26,36 +29,22 @@ class EditEventsViewController: UIViewController {
     }
     
     
-    func createDatePicker(){
-        //format the display of the date picker
-        datePicker.datePickerMode = .dateAndTime
-        
-        dateOfEvent.inputView = datePicker
-        //create a toolbar
-        let toolbar = UIToolbar()
-        toolbar.sizeToFit()
-        //add button to toolbar
-        let donebutton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneClicked))
-        toolbar.setItems([donebutton], animated: true)
-        dateOfEvent.inputAccessoryView = toolbar
-        
-    }
-    
-    @objc func doneClicked(){
-        //format the date display in textfield
-        let dateformatter = DateFormatter()
-        dateformatter.dateStyle = .medium
-        dateformatter.timeStyle = .short
-        dateOfEvent.text = dateformatter.string(from: datePicker.date)
-        self.view.endEditing(true)
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
+         let event = Events.events.eventsForSelectedOrg[Events.events.selectedEventIndex]
+        let formatter = DateFormatter()
+        
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            let myString =  formatter.string(from: event.eventDate)
+        let yourDate = formatter.date(from:myString)
+        formatter.dateFormat = "dd-MMM-yyyy HH:mm"
+        let myStringfd = formatter.string(from:yourDate!)
+        
         //self.title=eventNameTXT
-        let event = Events.events.eventsForSelectedOrg[Events.events.selectedEventIndex]
+       
        self.eventNameTXT.text = event.eventTitle
         self.locationTXT.text = event.eventLocation!
-        self.dateOfEvent.text =  "\(event.eventDate)"
+        
+        self.dateOfEvent.text =  "\(myStringfd)"
         
         
         

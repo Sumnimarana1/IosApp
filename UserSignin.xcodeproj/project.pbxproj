@@ -45,9 +45,9 @@
 		635CE01835E13D968080C2E7 /* Pods_UserSignin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB1F023BD6D0E3210248007 /* Pods_UserSignin.framework */; };
 		8069FC2C21703CF6009C4C70 /* AdminTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8069FC2B21703CF6009C4C70 /* AdminTableViewController.swift */; };
 		80948D74218FEC0A00500BF0 /* WallpaperWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80948D73218FEC0A00500BF0 /* WallpaperWindow.swift */; };
-		BB87B9B0216AF625003DBE3C /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB87B9AF216AF625003DBE3C /* FormViewController.swift */; };
+		BB87B9B0216AF625003DBE3C /* AddNewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB87B9AF216AF625003DBE3C /* AddNewEventViewController.swift */; };
 		BBA328302191454200A47B85 /* EventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA3282F2191454200A47B85 /* EventData.swift */; };
-		E75B4F03217D32BE000E7428 /* EditEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75B4F02217D32BE000E7428 /* EditEventsViewController.swift */; };
+		E75B4F03217D32BE000E7428 /* EventsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75B4F02217D32BE000E7428 /* EventsDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,9 +118,9 @@
 		9E4ACFC643D72DE2B5812641 /* Pods-UserSigninUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSigninUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UserSigninUITests/Pods-UserSigninUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9FD42591BDF385B20AD0284D /* Pods-UserSigninTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSigninTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UserSigninTests/Pods-UserSigninTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ACCC027A0C14BD00D8FA0C59 /* Pods-UserSigninTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSigninTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UserSigninTests/Pods-UserSigninTests.release.xcconfig"; sourceTree = "<group>"; };
-		BB87B9AF216AF625003DBE3C /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		BB87B9AF216AF625003DBE3C /* AddNewEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEventViewController.swift; sourceTree = "<group>"; };
 		BBA3282F2191454200A47B85 /* EventData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventData.swift; sourceTree = "<group>"; };
-		E75B4F02217D32BE000E7428 /* EditEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventsViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		E75B4F02217D32BE000E7428 /* EventsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetailViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		F33DC5DE85620CA65F579FCE /* Pods_UserSigninTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserSigninTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -253,7 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				3FEC02B12161457700C66198 /* AppDelegate.swift */,
-				BB87B9AF216AF625003DBE3C /* FormViewController.swift */,
+				BB87B9AF216AF625003DBE3C /* AddNewEventViewController.swift */,
 				BBA3282F2191454200A47B85 /* EventData.swift */,
 				8069FC2B21703CF6009C4C70 /* AdminTableViewController.swift */,
 				3F26F836218EA03700B72A7B /* IQKeyboardManagerSwift */,
@@ -264,7 +264,7 @@
 				371FBB6F21862D1800FAE360 /* CollectionViewController.swift */,
 				371FBB6B21862A5F00FAE360 /* CollectionViewCell.swift */,
 				371FBB6D21862A7400FAE360 /* HomeCollectionViewController.swift */,
-				E75B4F02217D32BE000E7428 /* EditEventsViewController.swift */,
+				E75B4F02217D32BE000E7428 /* EventsDetailViewController.swift */,
 				3F1190C7217D03CD0071FC4D /* EventViewController.swift */,
 				3FF876AF2166D82F005844FF /* RegisterViewController.swift */,
 				3F437243216183BB00DC0656 /* Model.swift */,
@@ -535,7 +535,7 @@
 				3F26F85B218EA03700B72A7B /* IQUIViewController+Additions.swift in Sources */,
 				3F26F856218EA03700B72A7B /* IQKeyboardManagerConstants.swift in Sources */,
 				3F26F85A218EA03700B72A7B /* IQUIScrollView+Additions.swift in Sources */,
-				BB87B9B0216AF625003DBE3C /* FormViewController.swift in Sources */,
+				BB87B9B0216AF625003DBE3C /* AddNewEventViewController.swift in Sources */,
 				3F26F850218EA03700B72A7B /* IQTitleBarButtonItem.swift in Sources */,
 				3F1190C8217D03CD0071FC4D /* EventViewController.swift in Sources */,
 				8069FC2C21703CF6009C4C70 /* AdminTableViewController.swift in Sources */,
@@ -544,7 +544,7 @@
 				3F26F855218EA03700B72A7B /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				3F26F859218EA03700B72A7B /* IQKeyboardManager.swift in Sources */,
 				3F26F85D218EA03700B72A7B /* IQUIView+Hierarchy.swift in Sources */,
-				E75B4F03217D32BE000E7428 /* EditEventsViewController.swift in Sources */,
+				E75B4F03217D32BE000E7428 /* EventsDetailViewController.swift in Sources */,
 				371FBB6C21862A5F00FAE360 /* CollectionViewCell.swift in Sources */,
 				3F26F85C218EA03700B72A7B /* IQUITextFieldView+Additions.swift in Sources */,
 				371FBB7021862D1800FAE360 /* CollectionViewController.swift in Sources */,
