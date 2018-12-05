@@ -53,8 +53,8 @@ class EventsDetailViewController: UIViewController {
         let yourDate = formatter.date(from:myString)
         formatter.dateFormat = "dd-MMM-yyyy HH:mm"
         let myStringfd = formatter.string(from:yourDate!)
-        var s = "https://backendlessappcontent.com/A973CD44-FBCE-DEA4-FF7B-407958544E00/E8343EB1-D71A-6350-FFDE-516417EBC600/files/images/\(event.eventTitle!).jpg"
-        self.eventImage.load(url: URL(string: s)!);
+        let s = "https://backendlessappcontent.com/A973CD44-FBCE-DEA4-FF7B-407958544E00/E8343EB1-D71A-6350-FFDE-516417EBC600/files/images/\(event.eventTitle!).jpg"
+        self.eventImage.load(url: URL(string: s)!)
        self.eventNameTXT.text = event.eventTitle
         self.locationTXT.text = event.eventLocation!
         
