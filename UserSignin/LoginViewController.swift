@@ -8,6 +8,7 @@
 
 import UIKit
 
+/*Loginview controller has the email and the pass word field.This connects back to the backendless app to authorie the admins to login in order to add the events to the app.*/
 class LoginViewController: UIViewController {
     @IBAction func Done(_ sender: Any) {
          self.dismiss(animated: true, completion: nil)

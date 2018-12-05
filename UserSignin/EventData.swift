@@ -8,7 +8,7 @@
 
 import Foundation
 
-
+/*This is the struct for the EventData that has all the properties similar to the backendless database.*/
 @objcMembers
 class EventData: NSObject {
     var imageName:String?

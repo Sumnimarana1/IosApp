@@ -8,6 +8,7 @@
 
 import UIKit
 
+//this View controller would allow admins to view all thier related events that they have added to the app.
 class AdminTableViewController: UITableViewController {
 
     let backendless = Backendless.sharedInstance()!

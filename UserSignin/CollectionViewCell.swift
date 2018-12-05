@@ -8,6 +8,7 @@
 
 import UIKit
 
+/* Collection View cell the customized cell for the homeview to appear in the format for the user to view*/
 class CollectionViewCell: UICollectionViewCell {
     var evntImage=""
     

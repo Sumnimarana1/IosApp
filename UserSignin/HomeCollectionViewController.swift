@@ -8,6 +8,8 @@
 
 import UIKit
 
+/*home collection view for the Discover page. This view controller would make the events to appear in the collection view format and the collection of the images and text appears in the customized format.*/
+
 class HomeCollectionViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
     var events = Events.events
     var event = Events.events.allEvents

@@ -9,6 +9,7 @@
 import UIKit
 //import Backendless
 
+//Register View Controller would allow the admin to register for the app.
 class RegisterViewController: UIViewController {
   
     

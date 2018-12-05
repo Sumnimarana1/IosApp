@@ -9,6 +9,7 @@ import UIKit
 
 import Foundation
 
+/*This is the main model for the project where all the functions are written in order to add the events, retrieve all the events, retrieve all the organization.*/
 extension Notification.Name {
     static let OrgRetrieved = Notification.Name("Organization Retrieved")
     static let EventsRetrieved = Notification.Name("events Retrieved")

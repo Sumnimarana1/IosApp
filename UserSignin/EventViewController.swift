@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+/* Event View controller setups the view getting the data from Backendless Database which is used later in the HomeView controller to make the events appear*/
 class EventViewController: UIViewController {
 
     var evntName=""

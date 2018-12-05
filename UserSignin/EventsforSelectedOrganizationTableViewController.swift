@@ -8,6 +8,7 @@
 
 import UIKit
 
+/*After the user clicks on the tab of the orgnaization in th Discover page. this Table view controller makes the user to view the events of each organization in the table view format and makes them easier to see the events associted with particular organization.*/
 class EventsforSelectedOrganizationTableViewController: UITableViewController {
    var events:Events!
     var selectedOrg:Organization!

@@ -10,6 +10,7 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UITextFieldDelegate {
+    //giving the app_Id ad the api_Key for the app
     let APP_ID = "A973CD44-FBCE-DEA4-FF7B-407958544E00"
     let API_KEY = "4C705EBE-331F-E54B-FFAB-C1F9D9EB7D00"
     

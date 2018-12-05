@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+/* This table view controller is to view the organization to appear on the home page. The Organization are listed in the table view form for the user to view which basically makes them easier to navigate */
 class OrganizationTableViewController: UITableViewController {
 
      var events:Events!

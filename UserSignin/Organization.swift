@@ -8,6 +8,7 @@
 
 import Foundation
 
+/* This is the struct for the organization that has all the properties similar to the backendless database.*/
 @objcMembers
 class Organization:NSObject {
     
